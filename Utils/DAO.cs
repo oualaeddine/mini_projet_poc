@@ -10,7 +10,7 @@ namespace Utils
     public class DAO : IDAO
     {
        protected MySqlConnection conn;
-        static readonly string CONN_STRING = "";
+        static readonly string CONN_STRING = "server=localhost;user id=root;persistsecurityinfo=True;database=gestion_biblio";
 
         public DAO()
         {

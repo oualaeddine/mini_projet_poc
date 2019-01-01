@@ -14,6 +14,5 @@ namespace AuthLib
             return false;
         }
         bool changePassword(User user, string password) { return false; }
-
     }
 }
