@@ -35,5 +35,9 @@ namespace HumansLib
         {
             throw new NotImplementedException();
         }
+        bool exists(User user, string password)
+        {
+            throw new NotImplementedException();//todo
+        }
     }
 }

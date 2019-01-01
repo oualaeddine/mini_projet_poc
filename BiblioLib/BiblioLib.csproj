@@ -39,9 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MembersOper.cs" />
+    <Compile Include="IMembersOper.cs" />
+    <Compile Include="ISystemOper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsersOper.cs" />
+    <Compile Include="IUsersOper.cs" />
+    <Compile Include="Reservation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HumansLib\HumansLib.csproj">
+      <Project>{E41E5007-DE1D-4992-B25A-DA3CCA26D34B}</Project>
+      <Name>HumansLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OuveragesLib\OuveragesLib.csproj">
+      <Project>{026235FA-4009-4F40-9D61-E5A4A4BC9227}</Project>
+      <Name>OuveragesLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

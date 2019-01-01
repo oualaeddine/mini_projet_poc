@@ -39,12 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AuthMember.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersAuth.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HumansDAL\HumansDAL.csproj">
+      <Project>{C06455E4-ED02-4DB3-85C0-D231DB44B1E3}</Project>
+      <Name>HumansDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HumansLib\HumansLib.csproj">
-      <Project>{e41e5007-de1d-4992-b25a-da3cca26d34b}</Project>
+      <Project>{E41E5007-DE1D-4992-B25A-DA3CCA26D34B}</Project>
       <Name>HumansLib</Name>
     </ProjectReference>
   </ItemGroup>

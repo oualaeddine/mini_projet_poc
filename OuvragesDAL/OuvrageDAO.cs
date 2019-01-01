@@ -1,17 +1,21 @@
-﻿using OuveragesLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Utils;
 
-namespace OuvragesCRUD
+namespace OuvragesDAL
 {
-    public class IOuvragesCRUD : ICRUD
+    public class OuvrageDAO : DAO
     {
+     
         public bool delete(object obj)
         {
-            Ouvrage ouvrage = (Ouvrage)obj;
+            throw new NotImplementedException();
+        }
+
+        public bool edit(object obj)
+        {
             throw new NotImplementedException();
         }
 
@@ -20,22 +24,13 @@ namespace OuvragesCRUD
             throw new NotImplementedException();
         }
 
-        public object getById(int id)
+        public object getByID(int id)
         {
             throw new NotImplementedException();
         }
 
         public bool insert(object obj)
         {
-            Ouvrage ouvrage = (Ouvrage)obj;
-
-            throw new NotImplementedException();
-        }
-
-        public bool update(object obj)
-        {
-            Ouvrage ouvrage = (Ouvrage)obj;
-
             throw new NotImplementedException();
         }
     }

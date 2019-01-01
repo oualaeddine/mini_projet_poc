@@ -8,7 +8,7 @@ using HumansLib.profs;
 
 namespace HumansLib
 {
-    public class StudentsDAO : DAO,IDAO
+    public class StudentsDAO : DAO, IDAO
 
     {
 
@@ -48,7 +48,6 @@ namespace HumansLib
                 return false;
             }
         }
-
         public bool edit(object obj)
         {
             Student prof = (Student)obj;
@@ -73,7 +72,9 @@ namespace HumansLib
             throw new NotImplementedException();//todo
         }
 
-
-
+        bool exists(Student student, string password)
+        {
+            throw new NotImplementedException();//todo
+        }
     }
 }

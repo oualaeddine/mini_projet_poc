@@ -39,13 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOuvragesCRUD.cs" />
+    <Compile Include="OuvragesCRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OuveragesLib\OuveragesLib.csproj">
       <Project>{026235fa-4009-4f40-9d61-e5a4a4bc9227}</Project>
       <Name>OuveragesLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OuvragesDAL\OuvragesDAL.csproj">
+      <Project>{350839AA-3E85-413A-9A31-8F060267CB0C}</Project>
+      <Name>OuvragesDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{dae23f52-6dbc-4c75-ba46-bb56cc12086c}</Project>

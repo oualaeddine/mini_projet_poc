@@ -34,12 +34,14 @@ namespace HumansLib.profs
 
             MySqlCommand command = this.conn.CreateCommand();
             command.CommandText = "delete from profs where id=" + prof.id;
-            try {
+            try
+            {
                 conn.Open();
                 command.BeginExecuteNonQuery();
                 return true;
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine(e.Message);
                 return false;
             }
@@ -71,7 +73,11 @@ namespace HumansLib.profs
 
         public object getByID(int id)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo
+        }
+        bool exists(Prof prof, string password)
+        {
+            throw new NotImplementedException();//todo
         }
     }
 }
