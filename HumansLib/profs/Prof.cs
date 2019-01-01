@@ -5,7 +5,9 @@ using System.Text;
 
 namespace HumansLib.profs
 {
-    class Prof
+    [Serializable]
+    public class Prof :Human
     {
+        string matricule { get; set; }
     }
 }

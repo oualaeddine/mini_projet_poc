@@ -1,15 +1,26 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using MySql.Data.MySqlClient;
-using Utils;
 
-namespace HumansLib
+namespace Utils
 {
-    public class UsersDAO : DAO
+    public class DAO : IDAO
     {
- 
+       protected MySqlConnection conn;
+        static readonly string CONN_STRING = "";
+
+        public DAO()
+        {
+            this.conn = createConnexion();
+        }
+
+        public MySqlConnection createConnexion()
+        {
+            return new MySqlConnection();
+        }
 
         public bool delete(object obj)
         {
@@ -21,17 +32,19 @@ namespace HumansLib
             throw new NotImplementedException();
         }
 
-        public LinkedList<object> getAll(object obj)
+
+        public bool insert(object obj)
         {
             throw new NotImplementedException();
         }
+
 
         public object getByID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool insert(object obj)
+        public LinkedList<object> getAll()
         {
             throw new NotImplementedException();
         }

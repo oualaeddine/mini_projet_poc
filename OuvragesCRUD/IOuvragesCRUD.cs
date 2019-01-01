@@ -1,38 +1,41 @@
-﻿using System;
+﻿using OuveragesLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MySql.Data.MySqlClient;
 using Utils;
 
-namespace HumansLib
+namespace OuvragesCRUD
 {
-    public class UsersDAO : DAO
+    public class IOuvragesCRUD : ICRUD
     {
- 
-
         public bool delete(object obj)
         {
+            Ouvrage ouvrage = (Ouvrage)obj;
             throw new NotImplementedException();
         }
 
-        public bool edit(object obj)
+        public LinkedList<object> getAll()
         {
             throw new NotImplementedException();
         }
 
-        public LinkedList<object> getAll(object obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object getByID(int id)
+        public object getById(int id)
         {
             throw new NotImplementedException();
         }
 
         public bool insert(object obj)
         {
+            Ouvrage ouvrage = (Ouvrage)obj;
+
+            throw new NotImplementedException();
+        }
+
+        public bool update(object obj)
+        {
+            Ouvrage ouvrage = (Ouvrage)obj;
+
             throw new NotImplementedException();
         }
     }

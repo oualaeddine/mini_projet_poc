@@ -39,11 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD.cs" />
     <Compile Include="ProfCRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentsCRUD.cs" />
     <Compile Include="UsersCRUD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HumansDAL\HumansDAL.csproj">
+      <Project>{c06455e4-ed02-4db3-85c0-d231db44b1e3}</Project>
+      <Name>HumansDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HumansLib\HumansLib.csproj">
+      <Project>{e41e5007-de1d-4992-b25a-da3cca26d34b}</Project>
+      <Name>HumansLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{dae23f52-6dbc-4c75-ba46-bb56cc12086c}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

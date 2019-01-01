@@ -7,11 +7,11 @@ namespace HumansLib
 {
     public class Human
     {
-        protected int id { get; set; }
-        protected string nom { get; set; }
-        protected string prenom { get; set; }
-        protected DateTime dateNaissance { get; set; }
-        protected string telephone { get; set; }
-        protected string email { get; set; }
+        public int id { get; set; }
+        public string nom { get; set; }
+        public string prenom { get; set; }
+        public DateTime dateNaissance { get; set; }
+        public string telephone { get; set; }
+        public string email { get; set; }
     }
 }

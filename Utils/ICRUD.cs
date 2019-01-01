@@ -10,7 +10,7 @@ namespace Utils
         bool insert(Object obj);
         bool update(Object obj);
         bool delete(Object obj);
-        Object getAll();
+        LinkedList<Object> getAll();
         Object getById(int id);
     }
 }

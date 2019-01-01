@@ -5,7 +5,9 @@ using System.Text;
 
 namespace HumansLib
 {
+    [Serializable]
   public  class User : Human
     {
+        public string matricule { get; set; }
     }
 }
