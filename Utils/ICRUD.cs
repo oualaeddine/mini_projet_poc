@@ -12,5 +12,7 @@ namespace Utils
         bool delete(Object obj);
         LinkedList<Object> getAll();
         Object getById(int id);
+
+        LinkedList<Object> find(Object obj);
     }
 }

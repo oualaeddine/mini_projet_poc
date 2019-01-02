@@ -56,28 +56,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="views\member_add.cs">
+    <Compile Include="views\members\member_add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\member_add.Designer.cs">
+    <Compile Include="views\members\member_add.Designer.cs">
       <DependentUpon>member_add.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\ouvrage_add.cs">
+    <Compile Include="views\ouvrages\ouvrage_add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\ouvrage_add.Designer.cs">
+    <Compile Include="views\ouvrages\ouvrage_add.Designer.cs">
       <DependentUpon>ouvrage_add.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\members_banned_list.cs">
+    <Compile Include="views\members\members_banned_list.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\members_banned_list.Designer.cs">
+    <Compile Include="views\members\members_banned_list.Designer.cs">
       <DependentUpon>members_banned_list.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\members_list.cs">
+    <Compile Include="views\members\members_list.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\members_list.Designer.cs">
+    <Compile Include="views\members\members_list.Designer.cs">
       <DependentUpon>members_list.cs</DependentUpon>
     </Compile>
     <Compile Include="views\MenuView.cs">
@@ -88,10 +88,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="views\ouvrage_list.cs">
+    <Compile Include="views\ouvrages\ouvrage_list.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\ouvrage_list.Designer.cs">
+    <Compile Include="views\ouvrages\ouvrage_list.Designer.cs">
       <DependentUpon>ouvrage_list.cs</DependentUpon>
     </Compile>
     <Compile Include="views\settings.cs">
@@ -109,22 +109,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="views\members_banned_list.resx">
+    <EmbeddedResource Include="views\members\members_banned_list.resx">
       <DependentUpon>members_banned_list.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\members_list.resx">
+    <EmbeddedResource Include="views\members\members_list.resx">
       <DependentUpon>members_list.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\member_add.resx">
+    <EmbeddedResource Include="views\members\member_add.resx">
       <DependentUpon>member_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\ouvrage_add.resx">
+    <EmbeddedResource Include="views\ouvrages\ouvrage_add.resx">
       <DependentUpon>ouvrage_add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\ouvrage_list.resx">
+    <EmbeddedResource Include="views\ouvrages\ouvrage_list.resx">
       <DependentUpon>ouvrage_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\settings.resx">

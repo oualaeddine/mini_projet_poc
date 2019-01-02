@@ -19,6 +19,11 @@ namespace HumansLib.profs
             return dao.delete(prof);
         }
 
+        public LinkedList<object> find(object obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public LinkedList<object> getAll()
         {
             return dao.getAll();
