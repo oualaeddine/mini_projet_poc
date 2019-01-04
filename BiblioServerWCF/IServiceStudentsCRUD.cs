@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using HumansLib;
@@ -41,6 +33,5 @@ namespace BiblioServerWCF
         [OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "delete", ResponseFormat = WebMessageFormat.Json)]
         bool delete(Student ouvrage);
-
     }
 }
