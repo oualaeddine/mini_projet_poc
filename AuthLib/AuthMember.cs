@@ -14,7 +14,7 @@ namespace AuthLib
 
         }
 
-        bool login(Student student, string password)
+        public  bool login(Student student, string password)
         {
             bool valid = validate(password);
             if (!valid)
@@ -22,7 +22,7 @@ namespace AuthLib
             return new StudentsDAO().exists(student, password);
         }
 
-        bool login(Prof prof, string password)
+        public  bool login(Prof prof, string password)
         {
             bool valid = validate(password);
             if (!valid)
@@ -36,7 +36,7 @@ namespace AuthLib
             throw new NotImplementedException();//todo
         }
 
-        bool changePassword(Student student, string password)
+        public  bool changePassword(Student student, string password)
         {
             bool valid = validate(password);
             if (!valid)
@@ -45,7 +45,7 @@ namespace AuthLib
             student = (Student)dao.getByID(student.id);
             return dao.edit(student);
         }
-        bool changePassword(Prof prof, string password)
+        public  bool changePassword(Prof prof, string password)
         {
             bool valid = validate(password);
             if (!valid)

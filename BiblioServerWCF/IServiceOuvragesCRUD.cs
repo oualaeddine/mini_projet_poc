@@ -39,10 +39,5 @@ namespace BiblioServerWCF
         [WebInvoke(Method = "DELETE", UriTemplate = "delete", ResponseFormat = WebMessageFormat.Json)]
         bool delete(Ouvrage ouvrage);
 
-
-
-
-
-
     }
 }

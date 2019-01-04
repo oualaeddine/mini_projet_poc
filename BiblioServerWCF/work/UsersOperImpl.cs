@@ -11,22 +11,22 @@ namespace BiblioServerWCF.work
 {
     public class UsersOperImpl : IUsersOper
     {
-        public bool preter(Reservation reservation, User user)
+        public bool preter(Ouvrage ouvrage, Prof prof)
         {
             throw new NotImplementedException();
         }
 
-        public bool preter(Ouvrage ouvrage, Student student, User user)
+        public bool preter(Ouvrage ouvrage, Student student)
         {
             throw new NotImplementedException();
         }
 
-        public bool preter(Ouvrage ouvrage, Prof prof, User user)
+        public bool preter(Reservation reservation)
         {
             throw new NotImplementedException();
         }
 
-        public bool recuperer(Ouvrage ouvrage, User user)
+        public bool recuperer(Ouvrage ouvrage)
         {
             throw new NotImplementedException();
         }

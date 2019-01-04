@@ -106,6 +106,10 @@
       <Project>{e5231a27-efd3-4eeb-82e8-1e010f7824b3}</Project>
       <Name>AppBiblio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AuthLib\HumansAuthLib.csproj">
+      <Project>{89926fa1-eb12-434d-aad1-cef7f1edbdb9}</Project>
+      <Name>HumansAuthLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BiblioLib\BiblioLib.csproj">
       <Project>{B3F1C015-D971-4701-B3E6-5867F342ECCE}</Project>
       <Name>BiblioLib</Name>

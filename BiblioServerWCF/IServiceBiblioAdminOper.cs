@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Text;
+using System.ServiceModel.Web;
+using HumansLib.profs;
 
 namespace BiblioServerWCF
 {
@@ -12,6 +10,11 @@ namespace BiblioServerWCF
     public interface IServiceBiblioAdminOper
     {
         [OperationContract]
-        void DoWork();
+        [WebInvoke(Method = "POST", UriTemplate = "rendre", ResponseFormat = WebMessageFormat.Json)]
+        bool rendre(string ouvrageId);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "preter", ResponseFormat = WebMessageFormat.Json)]
+        bool preter(string type, string id, string ouvrageId);
     }
 }

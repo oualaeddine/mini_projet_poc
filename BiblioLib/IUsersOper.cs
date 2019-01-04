@@ -10,9 +10,9 @@ namespace BiblioLib
 {
     public interface IUsersOper
     {
-        bool preter(Ouvrage ouvrage, Prof prof, User user);
-        bool preter(Ouvrage ouvrage, Student student, User user);
-        bool preter(Reservation reservation, User user);
-        bool recuperer(Ouvrage ouvrage, User user);
+        bool preter(Ouvrage ouvrage, Prof prof);
+        bool preter(Ouvrage ouvrage, Student student);
+        bool preter(Reservation reservation);
+        bool recuperer(Ouvrage ouvrage);
     }
 }
