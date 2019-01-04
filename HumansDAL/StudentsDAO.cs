@@ -72,7 +72,11 @@ namespace HumansLib
             throw new NotImplementedException();//todo
         }
 
-        bool exists(Student student, string password)
+        public bool exists(Student student, string password)
+        {
+            throw new NotImplementedException();//todo
+        }
+        public bool ban(Student student)
         {
             throw new NotImplementedException();//todo
         }

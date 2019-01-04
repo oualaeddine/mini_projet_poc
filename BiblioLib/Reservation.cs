@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BiblioLib
 {
-    class Reservation
+    public class Reservation
     {
         public Human member { get; set; }
         public Ouvrage ouvrage { get; set; }

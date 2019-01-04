@@ -8,10 +8,10 @@ using Utils;
 
 namespace OuvragesCRUD
 {
-    public class OuvragesCRUD : ICRUD
+    public class OuvragesCRUDO : ICRUD
     {
         OuvrageDAO dao;
-        public OuvragesCRUD()
+        public OuvragesCRUDO()
         {
             dao = new OuvrageDAO();
         }

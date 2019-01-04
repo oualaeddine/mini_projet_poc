@@ -1,4 +1,5 @@
 ﻿using HumansLib;
+using System;
 
 namespace AuthLib
 {
@@ -10,9 +11,26 @@ namespace AuthLib
             dao = new UsersDAO();
         }
 
-        bool login(User user, string password) {
-            return false;
+        bool login(User user, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            return new UsersDAO().exists(user, password);
         }
-        bool changePassword(User user, string password) { return false; }
+        bool changePassword(User user, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            StudentsDAO dao = new StudentsDAO();
+            user = (User)dao.getByID(user.id);
+            return dao.edit(user);
+        }
+        private bool validate(string password)
+        {
+            throw new NotImplementedException();//todo
+        }
+
     }
 }

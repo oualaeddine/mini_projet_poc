@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BiblioLib
 {
-    interface ISystemOper
+    public interface ISystemOper
     {
         bool banMember(Student student);
         bool banMember(Prof prof);

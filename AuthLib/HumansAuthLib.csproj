@@ -52,6 +52,10 @@
       <Project>{E41E5007-DE1D-4992-B25A-DA3CCA26D34B}</Project>
       <Name>HumansLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{DAE23F52-6DBC-4C75-BA46-BB56CC12086C}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

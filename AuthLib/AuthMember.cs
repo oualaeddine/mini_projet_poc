@@ -1,4 +1,5 @@
 ﻿using HumansLib;
+using HumansLib.profs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,48 @@ namespace AuthLib
     {
         public AuthMember()
         {
+
         }
 
-        bool login(Human member, string password) { return false; }
+        bool login(Student student, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            return new StudentsDAO().exists(student, password);
+        }
 
-        bool changePassword(Human member, string password) { return false; }
+        bool login(Prof prof, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            return new ProfDAO().exists(prof, password);
+
+        }
+
+        private bool validate(string password)
+        {
+            throw new NotImplementedException();//todo
+        }
+
+        bool changePassword(Student student, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            StudentsDAO dao = new StudentsDAO();
+            student = (Student)dao.getByID(student.id);
+            return dao.edit(student);
+        }
+        bool changePassword(Prof prof, string password)
+        {
+            bool valid = validate(password);
+            if (!valid)
+                return false;
+            StudentsDAO dao = new StudentsDAO();
+            prof = (Prof)dao.getByID(prof.id);
+            return dao.edit(prof);
+        }
     }
 }

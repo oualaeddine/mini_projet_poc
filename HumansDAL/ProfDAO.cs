@@ -75,7 +75,12 @@ namespace HumansLib.profs
         {
             throw new NotImplementedException();//todo
         }
-        bool exists(Prof prof, string password)
+        public bool exists(Prof prof, string password)
+        {
+            throw new NotImplementedException();//todo
+        }
+
+        public bool ban(Prof prof)
         {
             throw new NotImplementedException();//todo
         }

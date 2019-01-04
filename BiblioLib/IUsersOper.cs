@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BiblioLib
 {
-    interface IUsersOper
+    public interface IUsersOper
     {
         bool preter(Ouvrage ouvrage, Prof prof, User user);
         bool preter(Ouvrage ouvrage, Student student, User user);

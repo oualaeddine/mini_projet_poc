@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BiblioLib
 {
-    interface IMembersOper
+    public interface IMembersOper
     {
         bool reserver(Prof prof, Ouvrage ouvrage);
         bool reserver(Student student, Ouvrage ouvrage);

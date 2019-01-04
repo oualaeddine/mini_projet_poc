@@ -44,6 +44,13 @@
     <Compile Include="ICRUD.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OuveragesLib\OuveragesLib.csproj">
+      <Project>{026235FA-4009-4F40-9D61-E5A4A4BC9227}</Project>
+      <Name>OuveragesLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
