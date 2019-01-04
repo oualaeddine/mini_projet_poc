@@ -1,19 +1,15 @@
-﻿using MySql.Data.MySqlClient;
-using OuveragesLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using OuveragesLib;
 using Utils;
 
 namespace OuvragesDAL
 {
     public class OuvrageDAO : DAO
     {
-     
         public bool delete(Ouvrage obj)
         {
-            throw new NotImplementedException();//todo  bool delete(Ouvrage obj)
+            throw new NotImplementedException(); //todo  bool delete(Ouvrage obj)
         }
 
         public bool edit(Ouvrage obj)
@@ -23,9 +19,8 @@ namespace OuvragesDAL
 
         public LinkedList<Ouvrage> getAll()
         {
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * from ouvrages" ;
-
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT * from ouvrages";
             try
             {
                 conn.Open();
@@ -35,26 +30,28 @@ namespace OuvragesDAL
                 Console.Write("Erro" + erro);
                 this.conn.Close();
             }
-            LinkedList<Ouvrage> ouvrages = new LinkedList<Ouvrage>();
 
+            var ouvrages = new LinkedList<Ouvrage>();
+            var reader = cmd.ExecuteReader();
             try
             {
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                int count = reader.FieldCount;
-                while (reader.Read()) 
+                if (reader.HasRows)
                 {
-                        Ouvrage ouvrage = new Ouvrage();
-                        ouvrage.id = reader.GetInt32(0);
-                        ouvrage.title = reader.GetString(1);
-                        ouvrage.auteur = reader.GetString(2);
-                        ouvrage.keywords = reader.GetString(3);
-                        ouvrage.theme = reader.GetString(4);
-                        ouvrage.n_mat = reader.GetString(5);
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        var ouvrage = new Ouvrage
+                        {
+                            id = reader.GetInt32(reader.GetOrdinal("id")),
+                            title = reader.GetString(reader.GetOrdinal("titre")),
+                            auteur = reader.GetString(reader.GetOrdinal("auteur")),
+                            keywords = reader.GetString(reader.GetOrdinal("keywords")),
+                            theme = reader.GetString(reader.GetOrdinal("theme")),
+                            n_mat = reader.GetString(reader.GetOrdinal("n_mat"))
+                        };
                         ouvrages.AddLast(ouvrage);
                     }
+
                     reader.Close();
                 }
             }
@@ -63,17 +60,18 @@ namespace OuvragesDAL
                 Console.Write("Erro" + erro);
                 this.conn.Close();
             }
+
             return ouvrages;
         }
 
         public Ouvrage getByID(int id)
         {
-            throw new NotImplementedException();//todo Ouvrage getByID(int id)
+            throw new NotImplementedException(); //todo Ouvrage getByID(int id)
         }
 
         public bool insert(Ouvrage obj)
         {
-            throw new NotImplementedException();//todo  bool insert(Ouvrage obj)
+            throw new NotImplementedException(); //todo  bool insert(Ouvrage obj)
         }
     }
 }

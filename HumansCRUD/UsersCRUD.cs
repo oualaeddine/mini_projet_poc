@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Utils;
 
 namespace HumansLib
 {
-    public class UsersCRUD : ICRUD
+    public class UsersCRUD
     {
         UsersDAO dao;
+
         public UsersCRUD()
         {
             dao = new UsersDAO();
         }
+
         public bool delete(object obj)
         {
-            User user = (User)obj;
+            User user = (User) obj;
             return dao.delete(user);
         }
 
@@ -36,15 +35,14 @@ namespace HumansLib
 
         public bool insert(object obj)
         {
-            User user = (User)obj;
+            User user = (User) obj;
             return dao.insert(user);
         }
 
         public bool update(object obj)
         {
-            User user = (User)obj;
+            User user = (User) obj;
             return dao.edit(user);
         }
-
     }
 }

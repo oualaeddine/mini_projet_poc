@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Utils;
 
 namespace HumansLib
 {
@@ -17,13 +14,12 @@ namespace HumansLib
 
         public bool delete(Student obj)
         {
-            Student student = (Student) obj;
-            return dao.delete(student);
+            return dao.delete(obj);
         }
 
         public LinkedList<Student> find(Student obj)
         {
-            throw new NotImplementedException();//todo LinkedList<Student> find(Student obj)
+            throw new NotImplementedException(); //todo LinkedList<Student> find(Student obj)
         }
 
         public LinkedList<Student> getAll()
@@ -38,14 +34,12 @@ namespace HumansLib
 
         public bool insert(Student obj)
         {
-            Student student = (Student) obj;
-            return dao.insert(student);
+            return dao.insert(obj);
         }
 
         public bool update(Student obj)
         {
-            Student student = (Student) obj;
-            return dao.edit(student);
+            return dao.edit(obj);
         }
     }
 }

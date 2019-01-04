@@ -1,23 +1,19 @@
-﻿using OuveragesLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using OuveragesLib;
 
 namespace Utils
 {
     public class Utils
     {
-
-        public static LinkedList<Ouvrage> objectsListToOuvragesList(LinkedList<Object> list)
+        public static LinkedList<Ouvrage> objectsListToOuvragesList(LinkedList<object> list)
         {
-            LinkedList<Ouvrage> newList;
-            newList = new LinkedList<Ouvrage>();
+            var newList = new LinkedList<Ouvrage>();
 
-            foreach(Object obj in list)
+            foreach (object obj in list)
             {
-                newList.AddLast((Ouvrage)obj);
+                newList.AddLast((Ouvrage) obj);
             }
+
             return newList;
         }
     }

@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Utils;
 
 namespace HumansLib.profs
 {
-    public class ProfCRUD 
+    public class ProfCRUD
     {
         ProfDAO dao;
+
         public ProfCRUD()
         {
             dao = new ProfDAO();
         }
+
         public bool delete(object obj)
         {
-            Prof prof = (Prof)obj;
+            var prof = (Prof) obj;
             return dao.delete(prof);
         }
 
@@ -36,13 +35,13 @@ namespace HumansLib.profs
 
         public bool insert(Prof obj)
         {
-            Prof prof = (Prof)obj;
+            var prof = (Prof) obj;
             return dao.insert(prof);
         }
 
         public bool update(Prof obj)
         {
-            Prof prof = (Prof)obj;
+            var prof = (Prof) obj;
             return dao.edit(prof);
         }
     }
