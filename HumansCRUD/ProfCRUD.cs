@@ -6,7 +6,7 @@ using Utils;
 
 namespace HumansLib.profs
 {
-    class ProfCRUD : ICRUD
+    public class ProfCRUD 
     {
         ProfDAO dao;
         public ProfCRUD()
@@ -19,28 +19,28 @@ namespace HumansLib.profs
             return dao.delete(prof);
         }
 
-        public LinkedList<object> find(object obj)
+        public LinkedList<Prof> find(Prof obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //todo LinkedList<Prof> find(Prof obj)
         }
 
-        public LinkedList<object> getAll()
+        public LinkedList<Prof> getAll()
         {
             return dao.getAll();
         }
 
-        public object getById(int id)
+        public Prof getById(int id)
         {
             return dao.getByID(id);
         }
 
-        public bool insert(object obj)
+        public bool insert(Prof obj)
         {
             Prof prof = (Prof)obj;
             return dao.insert(prof);
         }
 
-        public bool update(object obj)
+        public bool update(Prof obj)
         {
             Prof prof = (Prof)obj;
             return dao.edit(prof);

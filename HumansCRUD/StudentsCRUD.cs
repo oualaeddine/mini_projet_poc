@@ -6,43 +6,45 @@ using Utils;
 
 namespace HumansLib
 {
-    public class StudentsCRUD :ICRUD
+    public class StudentsCRUD
     {
         StudentsDAO dao;
+
         public StudentsCRUD()
         {
             dao = new StudentsDAO();
         }
-        public bool delete(object obj)
+
+        public bool delete(Student obj)
         {
-            Student student = (Student)obj;
+            Student student = (Student) obj;
             return dao.delete(student);
         }
 
-        public LinkedList<object> find(object obj)
+        public LinkedList<Student> find(Student obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo LinkedList<Student> find(Student obj)
         }
 
-        public LinkedList<object> getAll()
+        public LinkedList<Student> getAll()
         {
             return dao.getAll();
         }
 
-        public object getById(int id)
+        public Student getById(int id)
         {
             return dao.getByID(id);
         }
 
-        public bool insert(object obj)
+        public bool insert(Student obj)
         {
-            Student student = (Student)obj;
+            Student student = (Student) obj;
             return dao.insert(student);
         }
 
-        public bool update(object obj)
+        public bool update(Student obj)
         {
-            Student student = (Student)obj;
+            Student student = (Student) obj;
             return dao.edit(student);
         }
     }

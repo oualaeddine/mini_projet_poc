@@ -21,7 +21,7 @@ namespace HumansLib
 
         public LinkedList<object> find(object obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //todo LinkedList<object> find(object obj)
         }
 
         public LinkedList<object> getAll()

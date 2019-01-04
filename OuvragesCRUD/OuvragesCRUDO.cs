@@ -23,7 +23,7 @@ namespace OuvragesCRUD
 
         public LinkedList<Ouvrage> find(object obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo  LinkedList<Ouvrage> find(object obj)
         }
 
         public LinkedList<Ouvrage> getAll()

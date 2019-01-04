@@ -13,12 +13,12 @@ namespace OuvragesDAL
      
         public bool delete(Ouvrage obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo  bool delete(Ouvrage obj)
         }
 
         public bool edit(Ouvrage obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //todo bool edit(Ouvrage obj)
         }
 
         public LinkedList<Ouvrage> getAll()
@@ -68,12 +68,12 @@ namespace OuvragesDAL
 
         public Ouvrage getByID(int id)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo Ouvrage getByID(int id)
         }
 
         public bool insert(Ouvrage obj)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo  bool insert(Ouvrage obj)
         }
     }
 }

@@ -12,34 +12,41 @@ namespace BiblioServerWCF
     // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez ServiceStudentsCRUD.svc ou ServiceStudentsCRUD.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class ServiceStudentsCRUD : IServiceStudentsCRUD
     {
-        public LinkedList<Student> getAll()
+        public bool add(Student student)
         {
-            throw new NotImplementedException();
+            StudentsCRUD crud = new StudentsCRUD();
+            return crud.insert(student);
         }
 
-        public Student getById(string id)
+        public bool delete(Student student)
         {
-            throw new NotImplementedException();
-        }
-
-        public LinkedList<Student> find(Student ouvrage)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool add(Student ouvrage)
-        {
-            throw new NotImplementedException();
+            StudentsCRUD crud = new StudentsCRUD();
+            return crud.delete(student);
         }
 
         public bool edit(Student student)
         {
-            throw new NotImplementedException();
+            StudentsCRUD crud = new StudentsCRUD();
+            return crud.update(student);
         }
 
-        public bool delete(Student ouvrage)
+        public LinkedList<Student> find(Student student)
         {
-            throw new NotImplementedException();
+            StudentsCRUD crud = new StudentsCRUD();
+
+            return crud.find(student);
+        }
+
+        public LinkedList<Student> getAll()
+        {
+            StudentsCRUD crud = new StudentsCRUD();
+            return crud.getAll();
+        }
+
+        public Student getById(string id)
+        {
+            StudentsCRUD crud = new StudentsCRUD();
+            return (Student)crud.getById(Int32.Parse(id));
         }
     }
 }

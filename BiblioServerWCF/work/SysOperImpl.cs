@@ -23,12 +23,12 @@ namespace BiblioServerWCF.work
 
         public bool sendNotif(Prof prof)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo sendNotif(Prof prof)
         }
 
         public bool sendNotif(Student student)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();//todo sendNotif(Student student)
         }
     }
 }
