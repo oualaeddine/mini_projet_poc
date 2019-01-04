@@ -19,7 +19,7 @@ namespace Utils
 
         public MySqlConnection createConnexion()
         {
-            return new MySqlConnection();
+            return new MySqlConnection(CONN_STRING);
         }
 
         public bool delete(object obj)

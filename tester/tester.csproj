@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{350839AA-3E85-413A-9A31-8F060267CB0C}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{698EEEC9-F3DA-416F-A004-E7A21F686826}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OuvragesDAL</RootNamespace>
-    <AssemblyName>OuvragesDAL</AssemblyName>
+    <RootNamespace>tester</RootNamespace>
+    <AssemblyName>tester</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,7 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,16 +41,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OuvrageDAO.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppBiblio\AppBiblio.csproj">
+      <Project>{e5231a27-efd3-4eeb-82e8-1e010f7824b3}</Project>
+      <Name>AppBiblio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuthLib\HumansAuthLib.csproj">
+      <Project>{89926fa1-eb12-434d-aad1-cef7f1edbdb9}</Project>
+      <Name>HumansAuthLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiblioLib\BiblioLib.csproj">
+      <Project>{b3f1c015-d971-4701-b3e6-5867f342ecce}</Project>
+      <Name>BiblioLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiblioServerWCF\BiblioServerWCF.csproj">
+      <Project>{42af857c-dff1-4581-8efc-fa991fae9ef1}</Project>
+      <Name>BiblioServerWCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HumansCRUD\HumansCRUD.csproj">
+      <Project>{9de020dd-d15d-4964-9467-7100848edabe}</Project>
+      <Name>HumansCRUD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HumansDAL\HumansDAL.csproj">
+      <Project>{c06455e4-ed02-4db3-85c0-d231db44b1e3}</Project>
+      <Name>HumansDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HumansLib\HumansLib.csproj">
+      <Project>{e41e5007-de1d-4992-b25a-da3cca26d34b}</Project>
+      <Name>HumansLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OuveragesLib\OuveragesLib.csproj">
-      <Project>{026235FA-4009-4F40-9D61-E5A4A4BC9227}</Project>
+      <Project>{026235fa-4009-4f40-9d61-e5a4a4bc9227}</Project>
       <Name>OuveragesLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OuvragesCRUD\OuvragesCRUD.csproj">
+      <Project>{63cfb25a-4fb1-4ff4-8e3c-83c81b58edd5}</Project>
+      <Name>OuvragesCRUD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OuvragesDAL\OuvragesDAL.csproj">
+      <Project>{350839aa-3e85-413a-9a31-8f060267cb0c}</Project>
+      <Name>OuvragesDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{DAE23F52-6DBC-4C75-BA46-BB56CC12086C}</Project>
+      <Project>{dae23f52-6dbc-4c75-ba46-bb56cc12086c}</Project>
       <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>

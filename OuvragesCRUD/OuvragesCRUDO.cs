@@ -8,7 +8,7 @@ using Utils;
 
 namespace OuvragesCRUD
 {
-    public class OuvragesCRUDO : ICRUD
+    public class OuvragesCRUDO :IOuvrageDAO
     {
         OuvrageDAO dao;
         public OuvragesCRUDO()
@@ -21,17 +21,17 @@ namespace OuvragesCRUD
             return dao.delete(ouvrage);
         }
 
-        public LinkedList<object> find(object obj)
+        public LinkedList<Ouvrage> find(object obj)
         {
             throw new NotImplementedException();
         }
 
-        public LinkedList<object> getAll()
+        public LinkedList<Ouvrage> getAll()
         {
             return dao.getAll();
         }
 
-        public object getById(int id)
+        public Ouvrage getById(int id)
         {
             return dao.getByID(id);
         }

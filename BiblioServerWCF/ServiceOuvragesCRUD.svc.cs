@@ -35,13 +35,13 @@ namespace BiblioServerWCF
         {
             OuvragesCRUDO crud = new OuvragesCRUDO();
 
-            return Utils.Utils.objectsListToOuvragesList(crud.find(ouvrage));
+            return crud.find(ouvrage);
         }
 
         public LinkedList<Ouvrage> getAll()
         {
             OuvragesCRUDO crud = new OuvragesCRUDO();
-            return Utils.Utils.objectsListToOuvragesList(crud.getAll());
+            return crud.getAll();
         }
 
         public Ouvrage getById(string id)

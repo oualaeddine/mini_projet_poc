@@ -23,7 +23,7 @@ namespace BiblioServerWCF
         Ouvrage getById(string id);
 
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "find/{ouvrage}", ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "POST", UriTemplate = "find", ResponseFormat = WebMessageFormat.Json)]
         LinkedList<Ouvrage> find(Ouvrage ouvrage);
 
 
