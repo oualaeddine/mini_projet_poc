@@ -159,7 +159,7 @@
             this.Controls.Add(this.title_tb);
             this.Controls.Add(this.metroLabel1);
             this.Name = "ouvrage_add";
-            this.Text = "add_ouvrage";
+            this.Text = "Ajouter un ouvrage";
             this.Load += new System.EventHandler(this.ouvrage_add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
