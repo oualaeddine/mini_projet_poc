@@ -34,7 +34,8 @@ namespace AppBiblio
 
         private void banned_list_Click(object sender, EventArgs e)
         {
-            new members_banned_list().Show();
+            // new members_banned_list().Show();
+            MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
         }
 
         private void add_ouvrage_Click(object sender, EventArgs e)
@@ -49,7 +50,9 @@ namespace AppBiblio
 
         private void settings_Click(object sender, EventArgs e)
         {
-            new settings().Show();
+            //new settings().Show();
+            MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
+
         }
     }
 }

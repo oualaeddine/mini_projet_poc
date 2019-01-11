@@ -74,12 +74,6 @@
     <Compile Include="views\ouvrages\ouvrage_add.Designer.cs">
       <DependentUpon>ouvrage_add.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\members\members_banned_list.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\members\members_banned_list.Designer.cs">
-      <DependentUpon>members_banned_list.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\members\members_list.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +109,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="views\members\members_banned_list.resx">
-      <DependentUpon>members_banned_list.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="views\members\members_list.resx">
       <DependentUpon>members_list.cs</DependentUpon>
     </EmbeddedResource>
