@@ -11,5 +11,7 @@ namespace HumansLib
     {
         [DataMember]
         public string n_carte { get; set; }
+        [DataMember]
+        public string niveau { get; set; }
     }
 }

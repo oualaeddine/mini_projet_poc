@@ -7,7 +7,7 @@ using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
 
-namespace BiblioServerWCF.work
+namespace BiblioLib.work
 {
     public class MembersOperImpl : IMembersOper
     {

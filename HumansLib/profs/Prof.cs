@@ -10,6 +10,6 @@ namespace HumansLib.profs
     public class Prof :Human
     {
         [DataMember]
-        string matricule { get; set; }
+       public string matricule { get; set; }
     }
 }

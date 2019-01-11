@@ -6,7 +6,7 @@ using System.Web;
 using HumansLib;
 using HumansLib.profs;
 
-namespace BiblioServerWCF.work
+namespace BiblioLib.work
 {
     public class SysOperImpl : ISystemOper
     {

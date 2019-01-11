@@ -1,9 +1,9 @@
 ﻿using System;
-using BiblioServerWCF.work;
 using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
 using static System.Int32;
+using BiblioLib.work;
 
 namespace BiblioServerWCF
 {

@@ -1,4 +1,4 @@
-﻿using BiblioServerWCF.work;
+﻿using BiblioLib.work;
 using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
