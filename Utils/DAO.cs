@@ -1,16 +1,14 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using MySql.Data.MySqlClient;
 
 namespace Utils
 {
     public class DAO : IDAO
     {
-       protected MySqlConnection conn;
-        static readonly string CONN_STRING = "server=localhost;user id=root;persistsecurityinfo=True;database=gestion_biblio";
+        protected MySqlConnection conn;
+
+        static readonly string CONN_STRING =
+            "server=localhost;user id=root;persistsecurityinfo=True;database=gestion_biblio";
 
         public DAO()
         {
@@ -24,29 +22,29 @@ namespace Utils
 
         public bool delete(object obj)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         public bool edit(object obj)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
 
         public bool insert(object obj)
         {
-            throw new NotImplementedException();
+            return false;
         }
 
 
         public object getByID(int id)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public LinkedList<object> getAll()
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using OuveragesLib;
 using OuvragesDAL;
 
@@ -22,7 +21,8 @@ namespace OuvragesCRUD
 
         public LinkedList<Ouvrage> find(object obj)
         {
-            throw new NotImplementedException(); //todo  LinkedList<Ouvrage> find(object obj)
+            return null;
+            //todo  LinkedList<Ouvrage> find(object obj)
         }
 
         public LinkedList<Ouvrage> getAll()

@@ -1,9 +1,4 @@
-﻿using BiblioLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using HumansLib;
+﻿using HumansLib;
 using HumansLib.profs;
 
 namespace BiblioLib.work
@@ -13,7 +8,6 @@ namespace BiblioLib.work
         public bool banMember(Prof prof)
         {
             return new ProfDAO().ban(prof);
-
         }
 
         public bool banMember(Student student)
@@ -23,12 +17,14 @@ namespace BiblioLib.work
 
         public bool sendNotif(Prof prof)
         {
-            throw new NotImplementedException();//todo sendNotif(Prof prof)
+            return false;
+//todo sendNotif(Prof prof)
         }
 
         public bool sendNotif(Student student)
         {
-            throw new NotImplementedException();//todo sendNotif(Student student)
+            return false;
+//todo sendNotif(Student student)
         }
     }
 }

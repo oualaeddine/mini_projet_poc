@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using HumansCRUD;
 using HumansLib;
 
 namespace BiblioServerWCF

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using HumansLib.profs;
 
-namespace HumansLib.profs
+namespace HumansCRUD
 {
     public class ProfCRUD
     {
@@ -20,7 +20,8 @@ namespace HumansLib.profs
 
         public LinkedList<Prof> find(Prof obj)
         {
-            throw new NotImplementedException(); //todo LinkedList<Prof> find(Prof obj)
+            return null;
+            //todo LinkedList<Prof> find(Prof obj)
         }
 
         public LinkedList<Prof> getAll()
@@ -35,13 +36,13 @@ namespace HumansLib.profs
 
         public bool insert(Prof obj)
         {
-            var prof = (Prof) obj;
+            var prof = obj;
             return dao.insert(prof);
         }
 
         public bool update(Prof obj)
         {
-            var prof = (Prof) obj;
+            var prof = obj;
             return dao.edit(prof);
         }
     }

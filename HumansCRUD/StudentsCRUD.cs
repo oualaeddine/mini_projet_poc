@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using HumansLib;
 
-namespace HumansLib
+namespace HumansCRUD
 {
     public class StudentsCRUD
     {
@@ -19,7 +19,8 @@ namespace HumansLib
 
         public LinkedList<Student> find(Student obj)
         {
-            throw new NotImplementedException(); //todo LinkedList<Student> find(Student obj)
+            return null;
+            //todo LinkedList<Student> find(Student obj)
         }
 
         public LinkedList<Student> getAll()
