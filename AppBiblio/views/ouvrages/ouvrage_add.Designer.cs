@@ -35,7 +35,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.n_mat_tb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.theme_cb = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.key_words_tb = new MetroFramework.Controls.MetroTextBox();
             this.add_btn = new MetroFramework.Controls.MetroButton();
@@ -99,14 +99,14 @@
             this.metroLabel5.TabIndex = 7;
             this.metroLabel5.Text = "Theme : ";
             // 
-            // metroComboBox1
+            // theme_cb
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(233, 178);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(131, 29);
-            this.metroComboBox1.TabIndex = 8;
+            this.theme_cb.FormattingEnabled = true;
+            this.theme_cb.ItemHeight = 23;
+            this.theme_cb.Location = new System.Drawing.Point(233, 178);
+            this.theme_cb.Name = "theme_cb";
+            this.theme_cb.Size = new System.Drawing.Size(131, 29);
+            this.theme_cb.TabIndex = 8;
             // 
             // metroLabel6
             // 
@@ -132,6 +132,7 @@
             this.add_btn.Size = new System.Drawing.Size(75, 23);
             this.add_btn.TabIndex = 11;
             this.add_btn.Text = "Ajouter";
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // cancel_btn
             // 
@@ -150,7 +151,7 @@
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.key_words_tb);
             this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.theme_cb);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.n_mat_tb);
             this.Controls.Add(this.metroLabel4);
@@ -175,7 +176,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTextBox n_mat_tb;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox theme_cb;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox key_words_tb;
         private MetroFramework.Controls.MetroButton add_btn;
