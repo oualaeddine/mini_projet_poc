@@ -34,6 +34,7 @@
             this.Auteur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Theme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disponibility = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ouvrages_table)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             this.Auteur,
             this.Theme,
             this.Matricule,
+            this.Disponibility,
             this.Keywords});
             this.ouvrages_table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ouvrages_table.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -85,6 +87,11 @@
             this.Matricule.HeaderText = "Matricule";
             this.Matricule.Name = "Matricule";
             // 
+            // Disponibility
+            // 
+            this.Disponibility.HeaderText = "Disponibilité";
+            this.Disponibility.Name = "Disponibility";
+            // 
             // Keywords
             // 
             this.Keywords.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -116,6 +123,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Auteur;
         private System.Windows.Forms.DataGridViewTextBoxColumn Theme;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Disponibility;
         private System.Windows.Forms.DataGridViewTextBoxColumn Keywords;
     }
 }

@@ -26,6 +26,7 @@ namespace AppBiblio.views.ouvrages
                     ouvrage.auteur,
                     ouvrage.theme,
                     ouvrage.n_mat,
+                    ouvrage.isDisponible,
                     ouvrage.keywords
                 );
             }

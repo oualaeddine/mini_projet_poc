@@ -27,7 +27,9 @@ namespace AppBiblio.api
                 id = 1,
                 keywords = "keyword",
                 n_mat = "gkrjgrkgj524",
-                theme = "theme", title = "title"
+                theme = "theme",
+                title = "title",
+                isDisponible = "disponnible"
             });
             ouvrages.AddLast(new Ouvrage
             {
@@ -35,7 +37,9 @@ namespace AppBiblio.api
                 id = 2,
                 keywords = "keyword",
                 n_mat = "gkrjgrkgj524",
-                theme = "theme", title = "title"
+                theme = "theme",
+                title = "title",
+                isDisponible = "non disponnible"
             });
             ouvrages.AddLast(new Ouvrage
             {
@@ -43,7 +47,9 @@ namespace AppBiblio.api
                 id = 3,
                 keywords = "keyword",
                 n_mat = "gkrjgrkgj524",
-                theme = "theme", title = "title"
+                theme = "theme",
+                title = "title",
+                isDisponible = "non disponnible"
             });
             ouvragesApiCallBack(ouvrages);
         }
