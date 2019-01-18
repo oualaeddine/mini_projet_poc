@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using AppBiblio.api;
 using HumansLib;
 using HumansLib.profs;
-using AppBiblio.views.members;
 
 namespace AppBiblio.views.members
 {
@@ -53,7 +52,8 @@ namespace AppBiblio.views.members
 
                     if (dialogResult == DialogResult.Yes)
                     {
-                        delete_member(int.Parse(members_table.SelectedRows[0].Cells[0].Value.ToString()));
+                        delete_member(int.Parse(members_table.SelectedRows[0].Cells[0].Value.ToString()),
+                            members_table.SelectedRows[0].Cells[3].Value.ToString());
                         MessageBox.Show("supprimé avec succés!");
                     }
 
@@ -68,10 +68,10 @@ namespace AppBiblio.views.members
             }
         }
 
-        private void delete_member(int value)
+        private void delete_member(int value, string type)
         {
             OnMemberDeleted onMemberDeleted = deleted;
-            new membersApi().delete(value, onMemberDeleted);
+            new membersApi().delete(value, type, onMemberDeleted);
         }
 
         public delegate void OnMemberDeleted(bool isDeleted);

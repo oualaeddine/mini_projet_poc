@@ -3,7 +3,7 @@ using HumansLib.profs;
 
 namespace HumansCRUD
 {
-    public class ProfCRUD
+    public class ProfCRUD : IProfCRUD
     {
         ProfDAO dao;
 
@@ -18,7 +18,7 @@ namespace HumansCRUD
             return dao.delete(prof);
         }
 
-        public LinkedList<Prof> find(Prof obj)
+        public LinkedList<Prof> find(string obj)
         {
             return null;
             //todo LinkedList<Prof> find(Prof obj)
@@ -44,6 +44,16 @@ namespace HumansCRUD
         {
             var prof = obj;
             return dao.edit(prof);
+        }
+
+        public Prof findOne(string search)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool isSuspended(Prof prof)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

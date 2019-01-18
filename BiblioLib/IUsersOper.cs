@@ -1,10 +1,6 @@
 ﻿using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BiblioLib
 {
@@ -14,5 +10,6 @@ namespace BiblioLib
         bool preter(Ouvrage ouvrage, Student student);
         bool preter(Reservation reservation);
         bool recuperer(Ouvrage ouvrage);
+        bool preter(int idOuvrage, int idMembreRes);
     }
 }

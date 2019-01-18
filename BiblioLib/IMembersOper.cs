@@ -1,10 +1,7 @@
-﻿using HumansLib;
+﻿using System.Collections.Generic;
+using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BiblioLib
 {
@@ -15,5 +12,6 @@ namespace BiblioLib
         bool subscribe(Prof prof, Ouvrage ouvrage);
         bool subscribe(Student student, Ouvrage ouvrage);
         LinkedList<Ouvrage> find(Ouvrage ouvrage);
+        void reserver(int idMember, int ouvrage);
     }
 }

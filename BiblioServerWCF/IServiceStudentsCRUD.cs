@@ -18,7 +18,7 @@ namespace BiblioServerWCF
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "find", ResponseFormat = WebMessageFormat.Json)]
-        LinkedList<Student> find(Student ouvrage);
+        LinkedList<Student> find(string ouvrage);
 
 
         [OperationContract]

@@ -24,7 +24,7 @@ namespace BiblioServerWCF
             return crud.update(student);
         }
 
-        public LinkedList<Student> find(Student student)
+        public LinkedList<Student> find(string student)
         {
             var crud = new StudentsCRUD();
 

@@ -29,5 +29,10 @@ namespace BiblioLib.work
             return false;
             //todo  recuperer(Ouvrage ouvrage)
         }
+
+        public bool preter(int idOuvrage, int idMembreRes)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

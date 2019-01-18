@@ -3,7 +3,7 @@ using HumansLib;
 
 namespace HumansCRUD
 {
-    public class StudentsCRUD
+    public class StudentsCRUD : IStudentCRUD
     {
         StudentsDAO dao;
 
@@ -17,7 +17,7 @@ namespace HumansCRUD
             return dao.delete(obj);
         }
 
-        public LinkedList<Student> find(Student obj)
+        public LinkedList<Student> find(string obj)
         {
             return null;
             //todo LinkedList<Student> find(Student obj)
@@ -41,6 +41,16 @@ namespace HumansCRUD
         public bool update(Student obj)
         {
             return dao.edit(obj);
+        }
+
+        public Student findOne(string search)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool isSuspended(Student member)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

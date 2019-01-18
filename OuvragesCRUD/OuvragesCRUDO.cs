@@ -19,6 +19,11 @@ namespace OuvragesCRUD
             return dao.delete(ouvrage);
         }
 
+        public LinkedList<Ouvrage> find(string obj)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public LinkedList<Ouvrage> find(object obj)
         {
             return null;

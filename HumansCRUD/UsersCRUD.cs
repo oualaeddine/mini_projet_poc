@@ -3,7 +3,7 @@ using HumansLib;
 
 namespace HumansCRUD
 {
-    public class UsersCRUD
+    public class UsersCRUD : IUsersCRUD
     {
         UsersDAO dao;
 

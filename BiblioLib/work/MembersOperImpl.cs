@@ -13,6 +13,11 @@ namespace BiblioLib.work
             //todo  find(Ouvrage ouvrage)
         }
 
+        public void reserver(int idMember, int ouvrage)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool reserver(Student student, Ouvrage ouvrage)
         {
             return false;
