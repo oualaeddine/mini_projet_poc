@@ -13,8 +13,8 @@ namespace AppBiblio.api
     public class membersApi
     {
         private static readonly string MEMBERS_API_ADD_MEMBER_URL = "http://localhost/ServiceMembersCRUD.svc/add";
-        public string ip { get; private set; }
-        public int port { get; private set; }
+        public string ip = "127.0.0.1";
+        public int port = 1234;
 
 
         public membersApi()

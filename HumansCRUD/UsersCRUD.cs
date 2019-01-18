@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HumansLib;
 
 namespace HumansCRUD
 {
-    public class UsersCRUD : IUsersCRUD
+    public class UsersCRUD : MarshalByRefObject, IUsersCRUD
     {
         UsersDAO dao;
 

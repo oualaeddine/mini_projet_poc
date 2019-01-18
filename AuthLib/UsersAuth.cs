@@ -1,9 +1,10 @@
-﻿using HumansLib;
-using System;
+﻿using System;
+using HumansLib;
 
 namespace AuthLib
 {
-    public class UsersAuth
+    public class UsersAuth : MarshalByRefObject
+
     {
         UsersDAO dao;
 

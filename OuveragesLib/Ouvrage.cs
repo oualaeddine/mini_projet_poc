@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace OuveragesLib
 {
+    [Serializable]
     [DataContract]
     public class Ouvrage : object
     {

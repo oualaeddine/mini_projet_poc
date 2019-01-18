@@ -21,7 +21,7 @@ namespace AppBiblio.api
 
                 ouvrageCRUD = (IOuvrageDAO) Activator.GetObject(
                     typeof(IOuvrageDAO),
-                    "tcp://" + ip + ":" + port + "/profsCRUD");
+                    "tcp://" + ip + ":" + port + "/ouvrageCRUD");
 
 
                 userOper = (IUsersOper) Activator.GetObject(
@@ -38,9 +38,8 @@ namespace AppBiblio.api
             }
         }
 
-        public string port { get; set; }
-
-        public string ip { get; set; }
+        public string ip = "127.0.0.1";
+        public int port = 1234;
 
         public IMembersOper memberOper { get; set; }
 

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using AppBiblio.views;
-using AppBiblio.views.ouvrages;
-using AppBiblio.views.oper;
 using AppBiblio.views.members;
+using AppBiblio.views.oper;
+using AppBiblio.views.ouvrages;
 
 namespace AppBiblio
 {
@@ -49,7 +49,5 @@ namespace AppBiblio
         {
             MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
         }
-
-  
     }
 }

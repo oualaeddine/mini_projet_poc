@@ -1,10 +1,11 @@
-﻿using HumansLib;
+﻿using System;
+using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
 
 namespace BiblioLib.work
 {
-    public class UsersOperImpl : IUsersOper
+    public class UsersOperImpl : MarshalByRefObject, IUsersOper
     {
         public bool preter(Ouvrage ouvrage, Prof prof)
         {

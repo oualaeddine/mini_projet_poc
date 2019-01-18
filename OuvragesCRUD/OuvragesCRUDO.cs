@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using OuveragesLib;
 using OuvragesDAL;
 
 namespace OuvragesCRUD
 {
-    public class OuvragesCRUDO : IOuvrageDAO
+    public class OuvragesCRUDO : MarshalByRefObject, IOuvrageDAO
     {
         OuvrageDAO dao;
 

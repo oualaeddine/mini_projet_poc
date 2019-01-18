@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
 
 namespace BiblioLib.work
 {
-    public class MembersOperImpl : IMembersOper
+    public class MembersOperImpl : MarshalByRefObject, IMembersOper
     {
         public LinkedList<Ouvrage> find(Ouvrage ouvrage)
         {

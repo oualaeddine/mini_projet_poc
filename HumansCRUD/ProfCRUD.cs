@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HumansLib.profs;
 
 namespace HumansCRUD
 {
-    public class ProfCRUD : IProfCRUD
+    public class ProfCRUD : MarshalByRefObject, IProfCRUD
     {
         ProfDAO dao;
 
