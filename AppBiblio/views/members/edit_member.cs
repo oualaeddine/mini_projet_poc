@@ -19,7 +19,7 @@ namespace AppBiblio.views.members
             InitializeComponent();
         }
 
-        public edit_member(object value)
+        public edit_member(object value) : this()
         {
             this.value = value;
         }

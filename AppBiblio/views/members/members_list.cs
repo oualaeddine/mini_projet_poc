@@ -28,7 +28,6 @@ namespace AppBiblio.views.members
             if (e.Button == MouseButtons.Right)
             {
                 menu = new ContextMenuStrip();
-                int position_xy_mouse_row = members_table.HitTest(e.X, e.Y).RowIndex;
                 members_table.Rows[e.RowIndex].Selected = true;
                 if (e.RowIndex >= 0)
                 {
@@ -79,9 +78,9 @@ namespace AppBiblio.views.members
 
         public delegate void OnMemberEdited(bool isEdited);
 
-        public delegate void OnGetData(LinkedList<object> result);
+        public delegate void OnGetData(LinkedList<Human> result);
 
-        void fillGrid(LinkedList<object> result)
+        void fillGrid(LinkedList<Human> result)
         {
             foreach (var human in result)
             {

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
 using AppBiblio.views;
 using AppBiblio.views.members;
+using AppBiblio.views.ouvrages;
 using HumansLib;
 using HumansLib.profs;
 using Newtonsoft.Json.Linq;
@@ -86,13 +88,13 @@ namespace AppBiblio.api
 
         public void getAll(members_list.OnGetData result)
         {
-            throw new NotImplementedException();
+            LinkedList<Human> membres = new LinkedList<Human>();
+            result(membres);
         }
 
-        public void trouverMembre(string search, object found)
+        public void trouverMembre(string search, ReserverPreter.OnMemberFound found)
         {
             //todo
         }
-        
     }
 }
