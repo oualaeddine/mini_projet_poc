@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppBiblio.api;
+using HumansLib;
+using HumansLib.profs;
+using AppBiblio.views.members;
 
-namespace AppBiblio.views
+namespace AppBiblio.views.members
 {
     public partial class members_list : MetroFramework.Forms.MetroForm
     {
@@ -14,20 +18,7 @@ namespace AppBiblio.views
 
         private void members_list_Load(object sender, EventArgs e)
         {
-            members_table.Rows.Add(1, "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add(2, "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add(3, "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add(4, "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
-            members_table.Rows.Add("1", "XX", "XX", "Etudiant", "XX", "XX", "Homme", "XX", "XX", "XX", "XX");
+            load_grid();
         }
 
         ContextMenuStrip menu;
@@ -38,7 +29,6 @@ namespace AppBiblio.views
             {
                 menu = new ContextMenuStrip();
                 int position_xy_mouse_row = members_table.HitTest(e.X, e.Y).RowIndex;
-                //  members_table.SelectedRows.Clear();
                 members_table.Rows[e.RowIndex].Selected = true;
                 if (e.RowIndex >= 0)
                 {
@@ -46,7 +36,6 @@ namespace AppBiblio.views
                     menu.Items.Add("Modifier").Name = "edit";
                 }
 
-                //   menu.Show(members_table, e.Location);
                 Point pos = this.PointToClient(Cursor.Position);
                 menu.Show(this, pos);
                 menu.ItemClicked += new ToolStripItemClickedEventHandler(menu_ItemClicked);
@@ -65,21 +54,16 @@ namespace AppBiblio.views
 
                     if (dialogResult == DialogResult.Yes)
                     {
-                        //do something
                         delete_member(int.Parse(members_table.SelectedRows[0].Cells[0].Value.ToString()));
                         MessageBox.Show("supprimé avec succés!");
-                    }
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        //do something else
                     }
 
                     break;
                 }
                 case "edit":
                 {
-                    //todo show edit memeber window 
-                    //    new EditMember(members_table.SelectedRows[0].Cells[0].Value);
+                    OnMemberEdited onMemberEdited = edited;
+                    new edit_member(members_table.SelectedRows[0].Cells[0].Value, onMemberEdited);
                     break;
                 }
             }
@@ -87,8 +71,87 @@ namespace AppBiblio.views
 
         private void delete_member(int value)
         {
-            new membersApi().delete(value);
-            this.Refresh();
+            OnMemberDeleted onMemberDeleted = deleted;
+            new membersApi().delete(value, onMemberDeleted);
+        }
+
+        public delegate void OnMemberDeleted(bool isDeleted);
+
+        public delegate void OnMemberEdited(bool isEdited);
+
+        public delegate void OnGetData(LinkedList<object> result);
+
+        void fillGrid(LinkedList<object> result)
+        {
+            foreach (var human in result)
+            {
+                if (human.GetType() == typeof(Prof))
+                {
+                    var prof = (Prof) human;
+                    members_table.Rows.Add(
+                        prof.id,
+                        prof.nom,
+                        prof.prenom,
+                        "Enseignant",
+                        prof.telephone,
+                        prof.email,
+                        prof.matricule,
+                        prof.sexe,
+                        "",
+                        "",
+                        prof.dateNaissance,
+                        prof.adresse
+                    );
+                }
+                else
+                {
+                    var student = (Student) human;
+                    members_table.Rows.Add(
+                        student.id,
+                        student.nom,
+                        student.prenom,
+                        "Enseignant",
+                        student.telephone,
+                        student.email,
+                        "",
+                        student.sexe,
+                        student.n_carte,
+                        student.niveau,
+                        student.dateNaissance,
+                        student.adresse
+                    );
+                }
+            }
+        }
+
+        private const string ERROR = "Une erreur c'est produite!";
+
+        private void deleted(bool isDeleted)
+        {
+            if (isDeleted)
+                MessageBox.Show("supprimé avec succés!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show(ERROR, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            load_grid();
+        }
+
+        private void edited(bool isEdited)
+        {
+            if (isEdited)
+                MessageBox.Show("modifié avec succés!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show(ERROR, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            load_grid();
+        }
+
+        private void load_grid()
+        {
+            OnGetData result = fillGrid;
+            new membersApi().getAll(result);
         }
     }
 }

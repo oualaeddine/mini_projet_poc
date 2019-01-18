@@ -2,6 +2,8 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using AppBiblio.views;
+using AppBiblio.views.members;
 using HumansLib;
 using HumansLib.profs;
 using Newtonsoft.Json.Linq;
@@ -77,7 +79,12 @@ namespace AppBiblio.api
             }
         }
 
-        internal void delete(int value)
+        internal void delete(int value, members_list.OnMemberDeleted onMemberDeleted)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void getAll(members_list.OnGetData result)
         {
             throw new NotImplementedException();
         }

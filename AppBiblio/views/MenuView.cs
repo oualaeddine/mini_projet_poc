@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using AppBiblio.views;
 using AppBiblio.views.ouvrages;
+using AppBiblio.views.oper;
+using AppBiblio.views.members;
 
 namespace AppBiblio
 {
@@ -29,8 +31,8 @@ namespace AppBiblio
 
         private void banned_list_Click(object sender, EventArgs e)
         {
-            // new members_banned_list().Show();
-            MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
+            //MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
+            new PreterOuvrage().Show();
         }
 
         private void add_ouvrage_Click(object sender, EventArgs e)
@@ -45,7 +47,12 @@ namespace AppBiblio
 
         private void settings_Click(object sender, EventArgs e)
         {
-            //new settings().Show();
+            new Recuperer().Show();
+            //MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
+        }
+
+        private void param_Click(object sender, EventArgs e)
+        {
             MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
         }
     }

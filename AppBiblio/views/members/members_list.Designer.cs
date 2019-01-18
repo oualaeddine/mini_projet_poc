@@ -1,4 +1,4 @@
-﻿namespace AppBiblio.views
+﻿namespace AppBiblio.views.members
 {
     partial class members_list
     {
@@ -37,6 +37,7 @@
             this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genre = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.n_carte = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,7 @@
             this.prenom,
             this.type,
             this.tel,
+            this.email,
             this.matricule,
             this.Genre,
             this.n_carte,
@@ -127,6 +129,12 @@
             this.tel.HeaderText = "telephone";
             this.tel.Name = "tel";
             this.tel.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // matricule
             // 
@@ -201,6 +209,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prenom;
         private System.Windows.Forms.DataGridViewComboBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn tel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn matricule;
         private System.Windows.Forms.DataGridViewComboBoxColumn Genre;
         private System.Windows.Forms.DataGridViewTextBoxColumn n_carte;

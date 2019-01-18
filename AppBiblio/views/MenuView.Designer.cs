@@ -30,12 +30,13 @@
         {
             this.add_member = new MetroFramework.Controls.MetroTile();
             this.members_list = new MetroFramework.Controls.MetroTile();
-            this.banned_list = new MetroFramework.Controls.MetroTile();
+            this.preter = new MetroFramework.Controls.MetroTile();
             this.add_ouvrage = new MetroFramework.Controls.MetroTile();
             this.ouvrages_list = new MetroFramework.Controls.MetroTile();
-            this.settings = new MetroFramework.Controls.MetroTile();
+            this.recuperer = new MetroFramework.Controls.MetroTile();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.connected_name = new MetroFramework.Controls.MetroLabel();
+            this.param = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // add_member
@@ -62,17 +63,17 @@
             this.members_list.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.members_list.Click += new System.EventHandler(this.members_list_Click);
             // 
-            // banned_list
+            // preter
             // 
-            this.banned_list.Location = new System.Drawing.Point(469, 63);
-            this.banned_list.Name = "banned_list";
-            this.banned_list.Size = new System.Drawing.Size(217, 125);
-            this.banned_list.Style = MetroFramework.MetroColorStyle.Red;
-            this.banned_list.TabIndex = 2;
-            this.banned_list.Text = "Liste membres bannis";
-            this.banned_list.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.banned_list.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.banned_list.Click += new System.EventHandler(this.banned_list_Click);
+            this.preter.Location = new System.Drawing.Point(469, 63);
+            this.preter.Name = "preter";
+            this.preter.Size = new System.Drawing.Size(217, 125);
+            this.preter.Style = MetroFramework.MetroColorStyle.Red;
+            this.preter.TabIndex = 2;
+            this.preter.Text = "Preter un ouvrage";
+            this.preter.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.preter.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.preter.Click += new System.EventHandler(this.banned_list_Click);
             // 
             // add_ouvrage
             // 
@@ -98,17 +99,17 @@
             this.ouvrages_list.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.ouvrages_list.Click += new System.EventHandler(this.ouvrages_list_Click);
             // 
-            // settings
+            // recuperer
             // 
-            this.settings.Location = new System.Drawing.Point(468, 194);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(217, 125);
-            this.settings.Style = MetroFramework.MetroColorStyle.Silver;
-            this.settings.TabIndex = 5;
-            this.settings.Text = "Parametres";
-            this.settings.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.settings.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.settings.Click += new System.EventHandler(this.settings_Click);
+            this.recuperer.Location = new System.Drawing.Point(468, 194);
+            this.recuperer.Name = "recuperer";
+            this.recuperer.Size = new System.Drawing.Size(217, 125);
+            this.recuperer.Style = MetroFramework.MetroColorStyle.Silver;
+            this.recuperer.TabIndex = 5;
+            this.recuperer.Text = "Recuperer un ouvrage";
+            this.recuperer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.recuperer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.recuperer.Click += new System.EventHandler(this.settings_Click);
             // 
             // metroLabel1
             // 
@@ -127,17 +128,28 @@
             this.connected_name.TabIndex = 7;
             this.connected_name.Text = "Berrehal Ouala Eddine";
             // 
+            // param
+            // 
+            this.param.FontWeight = MetroFramework.MetroLinkWeight.Light;
+            this.param.Location = new System.Drawing.Point(638, 318);
+            this.param.Name = "param";
+            this.param.Size = new System.Drawing.Size(75, 23);
+            this.param.TabIndex = 8;
+            this.param.Text = "Parametres";
+            this.param.Click += new System.EventHandler(this.param_Click);
+            // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 341);
+            this.Controls.Add(this.param);
             this.Controls.Add(this.connected_name);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.settings);
+            this.Controls.Add(this.recuperer);
             this.Controls.Add(this.ouvrages_list);
             this.Controls.Add(this.add_ouvrage);
-            this.Controls.Add(this.banned_list);
+            this.Controls.Add(this.preter);
             this.Controls.Add(this.members_list);
             this.Controls.Add(this.add_member);
             this.MaximizeBox = false;
@@ -155,12 +167,13 @@
 
         private MetroFramework.Controls.MetroTile add_member;
         private MetroFramework.Controls.MetroTile members_list;
-        private MetroFramework.Controls.MetroTile banned_list;
+        private MetroFramework.Controls.MetroTile preter;
         private MetroFramework.Controls.MetroTile add_ouvrage;
         private MetroFramework.Controls.MetroTile ouvrages_list;
-        private MetroFramework.Controls.MetroTile settings;
+        private MetroFramework.Controls.MetroTile recuperer;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel connected_name;
+        private MetroFramework.Controls.MetroLink param;
     }
 }
 

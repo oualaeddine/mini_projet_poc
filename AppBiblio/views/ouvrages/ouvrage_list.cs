@@ -88,7 +88,7 @@ namespace AppBiblio.views.ouvrages
 
         public delegate void OuvrageEdited(bool isEdited);
 
-        string ERROR = "Une erreur c'est produite!";
+        private const string ERROR = "Une erreur c'est produite!";
 
         public void edited(bool isEdited)
         {
