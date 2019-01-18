@@ -30,18 +30,18 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.matricule = new MetroFramework.Controls.MetroLabel();
+            this.titre = new MetroFramework.Controls.MetroLabel();
+            this.auteur = new MetroFramework.Controls.MetroLabel();
+            this.theme = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.search_box = new MetroFramework.Controls.MetroTextBox();
+            this.find_btn = new MetroFramework.Controls.MetroButton();
+            this.id_membre = new MetroFramework.Controls.MetroLabel();
+            this.nom_membre = new MetroFramework.Controls.MetroLabel();
+            this.etat_membre = new MetroFramework.Controls.MetroLabel();
+            this.Prenom_membre = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
@@ -54,16 +54,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel5, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.matricule, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.titre, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.auteur, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.theme, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel8, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel9, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel10, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.id_membre, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.nom_membre, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.etat_membre, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.Prenom_membre, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 63);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -87,41 +87,41 @@
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Ouvrage :";
             // 
-            // metroLabel2
+            // matricule
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 25);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(130, 19);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Matricule : 00252589";
+            this.matricule.AutoSize = true;
+            this.matricule.Location = new System.Drawing.Point(3, 25);
+            this.matricule.Name = "matricule";
+            this.matricule.Size = new System.Drawing.Size(130, 19);
+            this.matricule.TabIndex = 1;
+            this.matricule.Text = "Matricule : 00252589";
             // 
-            // metroLabel3
+            // titre
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(253, 25);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(245, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Titre : Systeme gestion de location de logements";
+            this.titre.AutoSize = true;
+            this.titre.Location = new System.Drawing.Point(253, 25);
+            this.titre.Name = "titre";
+            this.titre.Size = new System.Drawing.Size(245, 19);
+            this.titre.TabIndex = 2;
+            this.titre.Text = "Titre : Systeme gestion de location de logements";
             // 
-            // metroLabel4
+            // auteur
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 44);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(191, 19);
-            this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "Auteur : Berrehal Ouala Eddine";
+            this.auteur.AutoSize = true;
+            this.auteur.Location = new System.Drawing.Point(3, 44);
+            this.auteur.Name = "auteur";
+            this.auteur.Size = new System.Drawing.Size(191, 19);
+            this.auteur.TabIndex = 3;
+            this.auteur.Text = "Auteur : Berrehal Ouala Eddine";
             // 
-            // metroLabel5
+            // theme
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(253, 44);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(119, 19);
-            this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "Theme : Memoires";
+            this.theme.AutoSize = true;
+            this.theme.Location = new System.Drawing.Point(253, 44);
+            this.theme.Name = "theme";
+            this.theme.Size = new System.Drawing.Size(119, 19);
+            this.theme.TabIndex = 4;
+            this.theme.Text = "Theme : Memoires";
             // 
             // metroLabel6
             // 
@@ -137,65 +137,66 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.metroTextBox1);
-            this.flowLayoutPanel1.Controls.Add(this.metroButton1);
+            this.flowLayoutPanel1.Controls.Add(this.search_box);
+            this.flowLayoutPanel1.Controls.Add(this.find_btn);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(253, 66);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(245, 29);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // metroTextBox1
+            // search_box
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(154, 23);
-            this.metroTextBox1.TabIndex = 0;
+            this.search_box.Location = new System.Drawing.Point(3, 3);
+            this.search_box.Name = "search_box";
+            this.search_box.Size = new System.Drawing.Size(154, 23);
+            this.search_box.TabIndex = 0;
             // 
-            // metroButton1
+            // find_btn
             // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.Location = new System.Drawing.Point(163, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "Trouver";
+            this.find_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.find_btn.Location = new System.Drawing.Point(163, 3);
+            this.find_btn.Name = "find_btn";
+            this.find_btn.Size = new System.Drawing.Size(75, 23);
+            this.find_btn.TabIndex = 1;
+            this.find_btn.Text = "Trouver";
+            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
             // 
-            // metroLabel7
+            // id_membre
             // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 98);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(82, 19);
-            this.metroLabel7.TabIndex = 7;
-            this.metroLabel7.Text = "Id Membre :";
+            this.id_membre.AutoSize = true;
+            this.id_membre.Location = new System.Drawing.Point(3, 98);
+            this.id_membre.Name = "id_membre";
+            this.id_membre.Size = new System.Drawing.Size(82, 19);
+            this.id_membre.TabIndex = 7;
+            this.id_membre.Text = "Id Membre :";
             // 
-            // metroLabel8
+            // nom_membre
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(253, 98);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(46, 19);
-            this.metroLabel8.TabIndex = 8;
-            this.metroLabel8.Text = "Nom :";
+            this.nom_membre.AutoSize = true;
+            this.nom_membre.Location = new System.Drawing.Point(253, 98);
+            this.nom_membre.Name = "nom_membre";
+            this.nom_membre.Size = new System.Drawing.Size(46, 19);
+            this.nom_membre.TabIndex = 8;
+            this.nom_membre.Text = "Nom :";
             // 
-            // metroLabel9
+            // etat_membre
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(3, 117);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(125, 19);
-            this.metroLabel9.TabIndex = 9;
-            this.metroLabel9.Text = "Etat : Non suspendu";
+            this.etat_membre.AutoSize = true;
+            this.etat_membre.Location = new System.Drawing.Point(3, 117);
+            this.etat_membre.Name = "etat_membre";
+            this.etat_membre.Size = new System.Drawing.Size(125, 19);
+            this.etat_membre.TabIndex = 9;
+            this.etat_membre.Text = "Etat : Non suspendu";
             // 
-            // metroLabel10
+            // Prenom_membre
             // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(253, 117);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel10.TabIndex = 10;
-            this.metroLabel10.Text = "Prenom :";
+            this.Prenom_membre.AutoSize = true;
+            this.Prenom_membre.Location = new System.Drawing.Point(253, 117);
+            this.Prenom_membre.Name = "Prenom_membre";
+            this.Prenom_membre.Size = new System.Drawing.Size(63, 19);
+            this.Prenom_membre.TabIndex = 10;
+            this.Prenom_membre.Text = "Prenom :";
             // 
             // metroButton2
             // 
@@ -204,6 +205,7 @@
             this.metroButton2.Size = new System.Drawing.Size(93, 23);
             this.metroButton2.TabIndex = 1;
             this.metroButton2.Text = "Reserver/Preter";
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
@@ -212,6 +214,7 @@
             this.metroButton3.Size = new System.Drawing.Size(75, 23);
             this.metroButton3.TabIndex = 2;
             this.metroButton3.Text = "Annuler";
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // ReserverPreter
             // 
@@ -235,18 +238,18 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel matricule;
+        private MetroFramework.Controls.MetroLabel titre;
+        private MetroFramework.Controls.MetroLabel auteur;
+        private MetroFramework.Controls.MetroLabel theme;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroTextBox search_box;
+        private MetroFramework.Controls.MetroButton find_btn;
+        private MetroFramework.Controls.MetroLabel id_membre;
+        private MetroFramework.Controls.MetroLabel nom_membre;
+        private MetroFramework.Controls.MetroLabel etat_membre;
+        private MetroFramework.Controls.MetroLabel Prenom_membre;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
     }

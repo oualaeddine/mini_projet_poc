@@ -121,7 +121,7 @@ namespace AppBiblio.views.ouvrages
         private void reserPret(int id, bool isDispo)
         {
             OnOuvrageReserved ouvrageRes = onOuvrageReserved;
-            //todo show reserver/preter view
+            new ReserverPreter(id, isDispo, ouvrageRes).Show();
         }
 
         void onOuvrageReserved(string action)

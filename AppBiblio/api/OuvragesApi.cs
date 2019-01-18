@@ -17,7 +17,7 @@ namespace AppBiblio.api
             deleted(true);
         }
 
-        public void reserver(int id, int idMember, object reserved)
+        public void reserver(int id, int idMember, ReserverPreter.OnOuvrageReserve reserved)
         {
         }
 
@@ -64,6 +64,16 @@ namespace AppBiblio.api
                 isDisponible = false
             });
             ouvragesApiCallBack(ouvrages);
+        }
+
+        public void trouverById(int idOuvrage, ReserverPreter.OnOuvrageFound ouvrageFound)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void preter(int idOuvrage, int idMembreRes, ReserverPreter.OnOuvragePrete prete)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
