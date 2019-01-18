@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tester", "tester\tester.csproj", "{698EEEC9-F3DA-416F-A004-E7A21F686826}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerRemoting", "ServerRemoting\ServerRemoting.csproj", "{765D88DD-E56E-4DAA-8106-8D850EDDE09C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{698EEEC9-F3DA-416F-A004-E7A21F686826}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{698EEEC9-F3DA-416F-A004-E7A21F686826}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{698EEEC9-F3DA-416F-A004-E7A21F686826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{765D88DD-E56E-4DAA-8106-8D850EDDE09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765D88DD-E56E-4DAA-8106-8D850EDDE09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765D88DD-E56E-4DAA-8106-8D850EDDE09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765D88DD-E56E-4DAA-8106-8D850EDDE09C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,5 +115,6 @@ Global
 		{350839AA-3E85-413A-9A31-8F060267CB0C} = {7AAA192E-E271-409C-973D-27CB189CD7D4}
 		{42AF857C-DFF1-4581-8EFC-FA991FAE9EF1} = {6DE483EE-A3B7-45B1-BE2B-C18F93FFE2EA}
 		{DAE23F52-6DBC-4C75-BA46-BB56CC12086C} = {4FEE7998-046D-4006-BEF1-D241C7CC8797}
+		{765D88DD-E56E-4DAA-8106-8D850EDDE09C} = {6DE483EE-A3B7-45B1-BE2B-C18F93FFE2EA}
 	EndGlobalSection
 EndGlobal
