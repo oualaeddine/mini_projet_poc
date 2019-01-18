@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace AppBiblio.views.oper
+namespace AppBiblio.views.ouvrages
 {
-    public partial class PreterOuvrage : Form
+    public partial class ReserverPreter : MetroFramework.Forms.MetroForm
     {
-        public PreterOuvrage()
+        public ReserverPreter()
         {
             InitializeComponent();
+        }
+
+        private void ReserverPreter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

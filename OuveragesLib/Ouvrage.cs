@@ -12,6 +12,6 @@ namespace OuveragesLib
         [DataMember] public string keywords { get; set; }
         [DataMember] public string theme { get; set; }
         [DataMember] public string n_mat { get; set; }
-        [DataMember] public string isDisponible { get; set; }
+        [DataMember] public bool isDisponible { get; set; }
     }
 }

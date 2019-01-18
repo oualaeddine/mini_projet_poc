@@ -69,12 +69,6 @@
     <Compile Include="views\members\edit_member.Designer.cs">
       <DependentUpon>edit_member.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\oper\PreterOuvrage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\oper\PreterOuvrage.Designer.cs">
-      <DependentUpon>PreterOuvrage.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\oper\Recuperer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +113,12 @@
     <Compile Include="views\ouvrages\Ouvrage_list.Designer.cs">
       <DependentUpon>Ouvrage_list.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\ouvrages\ReserverPreter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ouvrages\ReserverPreter.Designer.cs">
+      <DependentUpon>ReserverPreter.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +134,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\oper\Recuperer.resx">
+      <DependentUpon>Recuperer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\ouvrages\EditOuvrage.resx">
       <DependentUpon>EditOuvrage.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ouvrages\Ouvrage_list.resx">
       <DependentUpon>Ouvrage_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ouvrages\ReserverPreter.resx">
+      <DependentUpon>ReserverPreter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\settings.resx">
       <DependentUpon>settings.cs</DependentUpon>

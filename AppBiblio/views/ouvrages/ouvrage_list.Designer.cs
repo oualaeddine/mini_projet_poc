@@ -36,6 +36,8 @@
             this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Disponibility = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchBox = new MetroFramework.Controls.MetroTextBox();
+            this.trouver = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.ouvrages_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,16 +100,36 @@
             this.Keywords.HeaderText = "Mots Clés";
             this.Keywords.Name = "Keywords";
             // 
+            // searchBox
+            // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBox.Location = new System.Drawing.Point(483, 31);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(164, 23);
+            this.searchBox.TabIndex = 1;
+            // 
+            // trouver
+            // 
+            this.trouver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.trouver.Location = new System.Drawing.Point(653, 31);
+            this.trouver.Name = "trouver";
+            this.trouver.Size = new System.Drawing.Size(75, 23);
+            this.trouver.TabIndex = 2;
+            this.trouver.Text = "Trouver";
+            this.trouver.Click += new System.EventHandler(this.trouver_Click);
+            // 
             // Ouvrage_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 449);
+            this.Controls.Add(this.trouver);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.ouvrages_table);
             this.MaximizeBox = false;
             this.Name = "Ouvrage_list";
             this.Resizable = false;
-            this.Text = "Ouvrage_list";
+            this.Text = "Liste des Ouvrages";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ouvrage_list_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ouvrages_table)).EndInit();
@@ -125,5 +147,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
         private System.Windows.Forms.DataGridViewTextBoxColumn Disponibility;
         private System.Windows.Forms.DataGridViewTextBoxColumn Keywords;
+        private MetroFramework.Controls.MetroTextBox searchBox;
+        private MetroFramework.Controls.MetroButton trouver;
     }
 }

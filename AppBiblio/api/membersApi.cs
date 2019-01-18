@@ -88,5 +88,11 @@ namespace AppBiblio.api
         {
             throw new NotImplementedException();
         }
+
+        public void trouverMembre(string search, object found)
+        {
+            //todo
+        }
+        
     }
 }

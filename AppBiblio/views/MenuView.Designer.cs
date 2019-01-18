@@ -70,7 +70,7 @@
             this.preter.Size = new System.Drawing.Size(217, 125);
             this.preter.Style = MetroFramework.MetroColorStyle.Red;
             this.preter.TabIndex = 2;
-            this.preter.Text = "Preter un ouvrage";
+            this.preter.Text = "Recuperer un ouvrage";
             this.preter.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.preter.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.preter.Click += new System.EventHandler(this.banned_list_Click);
@@ -106,7 +106,7 @@
             this.recuperer.Size = new System.Drawing.Size(217, 125);
             this.recuperer.Style = MetroFramework.MetroColorStyle.Silver;
             this.recuperer.TabIndex = 5;
-            this.recuperer.Text = "Recuperer un ouvrage";
+            this.recuperer.Text = "Parametres";
             this.recuperer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.recuperer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.recuperer.Click += new System.EventHandler(this.settings_Click);
@@ -136,7 +136,6 @@
             this.param.Size = new System.Drawing.Size(75, 23);
             this.param.TabIndex = 8;
             this.param.Text = "Parametres";
-            this.param.Click += new System.EventHandler(this.param_Click);
             // 
             // MenuView
             // 
