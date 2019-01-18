@@ -1,19 +1,17 @@
-﻿using HumansLib;
-using HumansLib.profs;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web.Script.Serialization;
+using HumansLib;
+using HumansLib.profs;
+using Newtonsoft.Json.Linq;
 
 namespace AppBiblio.api
 {
-   public class membersApi
+    public class membersApi
     {
-       private static readonly string MEMBERS_API_ADD_MEMBER_URL ="http://localhost/ServiceMembersCRUD.svc/add";
+        private static readonly string MEMBERS_API_ADD_MEMBER_URL = "http://localhost/ServiceMembersCRUD.svc/add";
+
         public void addMember(Student stu)
         {
             JObject o = new JObject();
@@ -48,12 +46,14 @@ namespace AppBiblio.api
         }
 
         private void sendMember(string member)
-        { // create a request
+        {
+            // create a request
             HttpWebRequest request = (HttpWebRequest)
-            WebRequest.Create(MEMBERS_API_ADD_MEMBER_URL); request.KeepAlive = false;
+                WebRequest.Create(MEMBERS_API_ADD_MEMBER_URL);
+            request.KeepAlive = false;
             request.ProtocolVersion = HttpVersion.Version10;
             request.Method = "POST";
-            
+
             // turn our request string into a byte stream
             byte[] postBytes = Encoding.UTF8.GetBytes(member);
 
@@ -69,12 +69,17 @@ namespace AppBiblio.api
             requestStream.Close();
 
             // grab te response and print it out to the console along with the status code
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            HttpWebResponse response = (HttpWebResponse) request.GetResponse();
             string result;
             using (StreamReader rdr = new StreamReader(response.GetResponseStream()))
             {
                 result = rdr.ReadToEnd();
             }
+        }
+
+        internal void delete(int value)
+        {
+            throw new NotImplementedException();
         }
     }
 }

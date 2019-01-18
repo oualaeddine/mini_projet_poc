@@ -141,6 +141,7 @@
             this.cancel_btn.Size = new System.Drawing.Size(75, 23);
             this.cancel_btn.TabIndex = 12;
             this.cancel_btn.Text = "Annuler";
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // ouvrage_add
             // 

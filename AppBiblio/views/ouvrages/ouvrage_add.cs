@@ -44,5 +44,10 @@ namespace AppBiblio.views
                 MessageBox.Show("verifiez les informations que vous avez entré", "Impossible d'ajouter l'ouvrage");
             }
         }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

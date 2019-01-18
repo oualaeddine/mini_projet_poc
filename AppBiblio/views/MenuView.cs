@@ -1,12 +1,7 @@
-﻿using AppBiblio.views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
+using AppBiblio.views;
+using AppBiblio.views.ouvrages;
 
 namespace AppBiblio
 {
@@ -45,14 +40,13 @@ namespace AppBiblio
 
         private void ouvrages_list_Click(object sender, EventArgs e)
         {
-            new ouvrage_list().Show();
+            new Ouvrage_list().Show();
         }
 
         private void settings_Click(object sender, EventArgs e)
         {
             //new settings().Show();
             MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
-
         }
     }
 }

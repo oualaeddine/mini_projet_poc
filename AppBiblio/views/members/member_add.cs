@@ -1,14 +1,9 @@
-﻿using AppBiblio.api;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using AppBiblio.api;
 using HumansLib;
 using HumansLib.profs;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace AppBiblio.views
 {
@@ -21,7 +16,6 @@ namespace AppBiblio.views
 
         private void member_add_Load(object sender, EventArgs e)
         {
-
         }
 
         private void add_b_Click(object sender, EventArgs e)
@@ -38,7 +32,6 @@ namespace AppBiblio.views
             string email = this.email.Text;
             string adresse = this.adresse.Text;
             string password = genererMdp();
-
 
 
             var api = new membersApi();
@@ -61,6 +54,7 @@ namespace AppBiblio.views
 
                 api.addMember(etudiant);
             }
+
             if (prof.Checked)
             {
                 string matricule = this.nom.Text;
@@ -90,7 +84,7 @@ namespace AppBiblio.views
 
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, 8)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         private void etud_CheckedChanged(object sender, EventArgs e)
