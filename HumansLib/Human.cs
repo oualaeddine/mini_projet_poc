@@ -3,8 +3,7 @@ using System.Runtime.Serialization;
 
 namespace HumansLib
 {
-    [Serializable]
-    [DataContract]
+    [DataContract, Serializable]
     public class Human
     {
         [DataMember] public int id { get; set; }

@@ -8,43 +8,44 @@ namespace OuvragesDAL
 {
     public class OuvrageDAO : DAO
     {
-        public bool delete(Ouvrage obj)
+        public bool delete(int obj)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText = $"delete from ouvrages where id={obj.id}";
-            try
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("deleting ouvrage : " + obj);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            MySqlCommand myCommand2 = new MySqlCommand($"delete from ouvrages where id={obj}", conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            conn.Close();
+            return true;
         }
 
         public bool edit(Ouvrage obj)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $" update ouvrages set auteur='{obj.auteur}',titre='{obj.title}',n_mat='{obj.n_mat}',theme='{obj.theme}',keywords='{obj.keywords}';";
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $" update ouvrages set auteur='{obj.auteur}',titre='{obj.title}',n_mat='{obj.n_mat}',theme='{obj.theme}',keywords='{obj.keywords}';"
+                , conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public LinkedList<Ouvrage> getAll()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("getAll() ouvrages  ");
+            Console.ForegroundColor = ConsoleColor.White;
             var cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT * from ouvrages";
             try
@@ -86,6 +87,9 @@ namespace OuvragesDAL
                 Console.Write("Erro" + erro);
                 this.conn.Close();
             }
+
+            this.conn.Close();
+
 
             return ouvrages;
         }
@@ -132,25 +136,24 @@ namespace OuvragesDAL
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return null;
         }
 
         public bool insert(Ouvrage obj)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"insert into ouvrages (titre, auteur, keywords, theme, n_mat)VALUES ('{obj.title}','{obj.auteur}','{obj.keywords}','{obj.theme}','{obj.n_mat}')";
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"insert into ouvrages (titre, auteur, keywords, theme, n_mat)VALUES ('{obj.title}','{obj.auteur}','{obj.keywords}','{obj.theme}','{obj.n_mat}')"
+                , conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            conn.Close();
+            return true;
         }
     }
 }

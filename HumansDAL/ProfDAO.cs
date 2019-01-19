@@ -7,63 +7,58 @@ namespace HumansLib.profs
 {
     public class ProfDAO : DAO
     {
-        public bool insert(Prof obj)
+        public bool insert(Prof prof)
         {
-            Prof prof = (Prof) obj;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("inserting " + prof);
+            Console.ForegroundColor = ConsoleColor.White;
+            string date_naiss = prof.dateNaissance.Year + "/" + prof.dateNaissance.Month + '/' +
+                                prof.dateNaissance.Day;
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"insert into members (nom, prenom, date_naissance, sexe, numero_tel, email, mdp, type) VALUES ('{prof.nom}',    '{prof.prenom}',    '{date_naiss}',    '{prof.sexe}',    '{prof.telephone}',    '{prof.email}',    '{prof.password}',    'PROF');INSERT INTO profs (id_member, matricule) VALUES (LAST_INSERT_ID(), '{prof.matricule}');",
+                conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
+            {
+            }
 
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"insert into members (nom, prenom, date_naissance, sexe, numero_tel, email, mdp, type) VALUES ({prof.nom},    '{prof.prenom}',    '{prof.dateNaissance}',    '{prof.sexe}',    '{prof.telephone}',    '{prof.email}',    '{prof.password}',    'PROF');INSERT INTO profs (id_member, matricule) VALUES (LAST_INSERT_ID(), '{prof.matricule}');";
-            try
-            {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public bool delete(Prof obj)
         {
-            Prof prof = (Prof) obj;
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"delete from members where id={obj.id}", conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
+            {
+            }
 
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText = $"delete from profs where id={prof.id}";
-            try
-            {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public bool edit(Prof obj)
         {
             Prof prof = (Prof) obj;
 
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"update members set nom={prof.nom},prenom={prof.prenom},date_naissance={prof.dateNaissance},sexe={prof.sexe},numero_tel={prof.telephone},email={prof.email},mdp={prof.password},type=PROF where id = {prof.id};update profs set matricule = {prof.matricule} where id_member = {prof.id}"; //todo edit(Prof obj)
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"update members set nom={prof.nom},prenom={prof.prenom},date_naissance={prof.dateNaissance},sexe={prof.sexe},numero_tel={prof.telephone},email={prof.email},mdp={prof.password},type=PROF where id = {prof.id};update profs set matricule = {prof.matricule} where id_member = {prof.id}"
+                , conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public LinkedList<Prof> getAll()
@@ -112,6 +107,8 @@ namespace HumansLib.profs
                 Console.Write("Erro" + erro);
                 this.conn.Close();
             }
+
+            this.conn.Close();
 
             return profs;
         }
@@ -162,6 +159,8 @@ namespace HumansLib.profs
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return null;
         }
 
@@ -200,25 +199,24 @@ namespace HumansLib.profs
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return false;
         }
 
         public bool ban(Prof prof)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"insert into bans (id_member, date_banned) VALUES ({prof.id},NOW());";
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"insert into bans (id_member, date_banned) VALUES ({prof.id},NOW());", conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
     }
 }

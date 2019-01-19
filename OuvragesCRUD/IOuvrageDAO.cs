@@ -5,15 +5,15 @@ namespace OuvragesCRUD
 {
     public interface IOuvrageDAO
     {
-        bool delete(object obj);
+        bool delete(int obj);
 
         LinkedList<Ouvrage> find(string obj);
 
         LinkedList<Ouvrage> getAll();
         Ouvrage getById(int id);
 
-        bool insert(object obj);
+        bool insert(Ouvrage obj);
 
-        bool update(object obj);
+        bool update(Ouvrage obj);
     }
 }

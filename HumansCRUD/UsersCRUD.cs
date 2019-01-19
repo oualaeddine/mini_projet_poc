@@ -13,35 +13,35 @@ namespace HumansCRUD
             dao = new UsersDAO();
         }
 
-        public bool delete(object obj)
+        public bool delete(User obj)
         {
             User user = (User) obj;
             return dao.delete(user);
         }
 
-        public LinkedList<object> find(object obj)
+        public LinkedList<User> find(User obj)
         {
             return null;
-            //todo LinkedList<object> find(object obj)
+            //todo LinkedList<User> find(User obj)
         }
 
-        public LinkedList<object> getAll()
+        public LinkedList<User> getAll()
         {
             return dao.getAll();
         }
 
-        public object getById(int id)
+        public User getById(int id)
         {
             return dao.getByID(id);
         }
 
-        public bool insert(object obj)
+        public bool insert(User obj)
         {
             User user = (User) obj;
             return dao.insert(user);
         }
 
-        public bool update(object obj)
+        public bool update(User obj)
         {
             User user = (User) obj;
             return dao.edit(user);

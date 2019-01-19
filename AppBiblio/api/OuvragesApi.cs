@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
+using System.Windows.Forms;
 using AppBiblio.views.oper;
 using AppBiblio.views.ouvrages;
 using BiblioLib;
@@ -16,7 +17,14 @@ namespace AppBiblio.api
             try
             {
                 TcpChannel chl = new TcpChannel();
+                var chnls = ChannelServices.RegisteredChannels;
+                foreach (var chnl in chnls)
+                {
+                    ChannelServices.UnregisterChannel(chnl);
+                }
+
                 ChannelServices.RegisterChannel(chl, false);
+
                 Console.WriteLine("Client: Canal enregistré");
 
                 ouvrageCRUD = (IOuvrageDAO) Activator.GetObject(
@@ -34,7 +42,7 @@ namespace AppBiblio.api
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERREUR :" + ex.Message);
+                MessageBox.Show("ERREUR :" + ex.Message);
             }
         }
 

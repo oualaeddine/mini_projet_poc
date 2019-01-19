@@ -18,7 +18,7 @@ namespace HumansLib
 //todo edit(User obj)
         }
 
-        public LinkedList<User> getAll(User obj)
+        public LinkedList<User> getAll()
         {
             return null;
 //todo LinkedList<User> getAll(User obj)
@@ -69,6 +69,8 @@ namespace HumansLib
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return null;
         }
 
@@ -113,6 +115,7 @@ namespace HumansLib
                 this.conn.Close();
             }
 
+            this.conn.Close();
             return false;
         }
     }

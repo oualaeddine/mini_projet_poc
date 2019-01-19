@@ -1,20 +1,21 @@
 using System.Collections.Generic;
+using HumansLib;
 
 namespace HumansCRUD
 {
     public interface IUsersCRUD
     {
-        bool delete(object obj);
+        bool delete(User obj);
 
-        LinkedList<object> find(object obj);
+        LinkedList<User> find(User obj);
 
-        LinkedList<object> getAll();
+        LinkedList<User> getAll();
 
-        object getById(int id);
+        User getById(int id);
 
-        bool insert(object obj);
+        bool insert(User obj);
 
 
-        bool update(object obj);
+        bool update(User obj);
     }
 }

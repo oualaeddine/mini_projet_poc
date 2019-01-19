@@ -109,7 +109,7 @@ namespace AppBiblio.views.members
                         student.id,
                         student.nom,
                         student.prenom,
-                        "Enseignant",
+                        "Etudiant",
                         student.telephone,
                         student.email,
                         "",

@@ -37,8 +37,8 @@ namespace AppBiblio.views
             var api = new membersApi();
             if (etud.Checked)
             {
-                string n_carte = this.nom.Text;
-                string niveau = this.nom.Text;
+                string n_carte = this.n_cate.Text;
+                string niveau = this.niveau.Text;
 
                 var etudiant = new Student();
                 etudiant.nom = nom;
@@ -57,7 +57,7 @@ namespace AppBiblio.views
 
             if (prof.Checked)
             {
-                string matricule = this.nom.Text;
+                string matricule = this.matricule.Text;
 
                 var prof = new Prof();
 

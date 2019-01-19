@@ -5,71 +5,67 @@ using Utils;
 
 namespace HumansLib
 {
-    public class StudentsDAO : DAO, IDAO
+    public class StudentsDAO : DAO
 
     {
         public bool insert(Student student)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"insert into members (nom, prenom, date_naissance, sexe, numero_tel, email, mdp, type) VALUES ({student.nom},    '{student.prenom}',    '{student.dateNaissance}',    '{student.sexe}',    '{student.telephone}',    '{student.email}',    '{student.password}',    'STUDENT');INSERT INTO students (id_member, niveau, n_carte) VALUES (LAST_INSERT_ID(), '{student.niveau}','{student.n_carte}');";
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("inserting student : " + student.niveau);
+            Console.ForegroundColor = ConsoleColor.White;
+            string date_naiss = student.dateNaissance.Year + "/" + student.dateNaissance.Month + '/' +
+                                student.dateNaissance.Day;
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"insert into members (nom, prenom, date_naissance, sexe, numero_tel, email, mdp, type) VALUES ('{student.nom}',    '{student.prenom}',    '{date_naiss}',    '{student.sexe}',    '{student.telephone}',    '{student.email}',    '{student.password}',    'STUDENT');INSERT INTO students (id_member, niveau, n_carte) VALUES (LAST_INSERT_ID(), '{student.niveau}','{student.n_carte}');",
+                conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
+            {
+            }
 
-            try
-            {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public bool delete(Student obj)
         {
-            Student student = (Student) obj;
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"delete from members where id={obj.id}", conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
+            {
+            }
 
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText = $"delete from members where id={student.id}";
-            try
-            {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public bool edit(Student obj)
         {
             Student student = (Student) obj;
 
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"update members set nom={student.nom},prenom={student.prenom},date_naissance={student.dateNaissance},sexe={student.sexe},numero_tel={student.telephone},email={student.email},mdp={student.password},type=STUDENT where id = {student.id};update students set n_carte = {student.n_carte} , niveau = {student.niveau} where id_member = {student.id}"; //todo edit(Prof obj)
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"update members set nom={student.nom},prenom={student.prenom},date_naissance={student.dateNaissance},sexe={student.sexe},numero_tel={student.telephone},email={student.email},mdp={student.password},type=STUDENT where id = {student.id};update students set n_carte = {student.n_carte} , niveau = {student.niveau} where id_member = {student.id}",
+                conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
 
         public LinkedList<Student> getAll()
         {
             var cmd = conn.CreateCommand();
-            cmd.CommandText = "select * from members,profs where profs.id_member = id;";
+            cmd.CommandText = "select * from members,students where students.id_member = id;";
             try
             {
                 conn.Open();
@@ -113,6 +109,8 @@ namespace HumansLib
                 Console.Write("Erro" + erro);
                 this.conn.Close();
             }
+
+            this.conn.Close();
 
             return students;
         }
@@ -164,6 +162,8 @@ namespace HumansLib
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return null;
         }
 
@@ -203,25 +203,25 @@ namespace HumansLib
                 this.conn.Close();
             }
 
+            this.conn.Close();
+
             return false;
         }
 
         public bool ban(Student student)
         {
-            MySqlCommand command = this.conn.CreateCommand();
-            command.CommandText =
-                $"insert into bans (id_member, date_banned) VALUES ({student.id},NOW());";
-            try
+            MySqlCommand myCommand2 = new MySqlCommand(
+                $"insert into bans (id_member, date_banned) VALUES ({student.id},NOW());"
+                , conn);
+            conn.Open();
+            var myReader2 = myCommand2.ExecuteReader();
+            while (myReader2.Read())
             {
-                conn.Open();
-                command.BeginExecuteNonQuery();
-                return true;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
+
+            myReader2.Close();
+            conn.Close();
+            return true;
         }
     }
 }

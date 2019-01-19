@@ -15,7 +15,7 @@ namespace BiblioServerWCF
         public bool delete(Ouvrage ouvrage)
         {
             var crud = new OuvragesCRUDO();
-            return crud.delete(ouvrage);
+            return crud.delete(ouvrage.id);
         }
 
         public bool edit(Ouvrage ouvrage)

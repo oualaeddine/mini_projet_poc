@@ -35,11 +35,11 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.n_carte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.niveau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_naissance = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,13 +116,9 @@
             // type
             // 
             this.type.HeaderText = "Type";
-            this.type.Items.AddRange(new object[] {
-            "Etudiant",
-            "Enseignant"});
             this.type.Name = "type";
             this.type.ReadOnly = true;
             this.type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // tel
             // 
@@ -145,11 +141,10 @@
             // Genre
             // 
             this.Genre.HeaderText = "Genre";
-            this.Genre.Items.AddRange(new object[] {
-            "Homme",
-            "Femme"});
             this.Genre.Name = "Genre";
             this.Genre.ReadOnly = true;
+            this.Genre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Genre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // n_carte
             // 
@@ -207,11 +202,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn prenom;
-        private System.Windows.Forms.DataGridViewComboBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn matricule;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
         private System.Windows.Forms.DataGridViewTextBoxColumn n_carte;
         private System.Windows.Forms.DataGridViewTextBoxColumn niveau;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_naissance;

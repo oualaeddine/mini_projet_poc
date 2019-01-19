@@ -14,10 +14,9 @@ namespace OuvragesCRUD
             dao = new OuvrageDAO();
         }
 
-        public bool delete(object obj)
+        public bool delete(int obj)
         {
-            var ouvrage = (Ouvrage) obj;
-            return dao.delete(ouvrage);
+            return dao.delete(obj);
         }
 
         public LinkedList<Ouvrage> find(string obj)
@@ -41,14 +40,14 @@ namespace OuvragesCRUD
             return dao.getByID(id);
         }
 
-        public bool insert(object obj)
+        public bool insert(Ouvrage obj)
         {
             var ouvrage = (Ouvrage) obj;
 
             return dao.insert(ouvrage);
         }
 
-        public bool update(object obj)
+        public bool update(Ouvrage obj)
         {
             var ouvrage = (Ouvrage) obj;
 

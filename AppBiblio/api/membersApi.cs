@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
+using System.Windows.Forms;
 using AppBiblio.views.members;
 using AppBiblio.views.ouvrages;
 using HumansCRUD;
@@ -21,8 +22,15 @@ namespace AppBiblio.api
         {
             try
             {
+                var chnls = ChannelServices.RegisteredChannels;
+                foreach (var chnl in chnls)
+                {
+                    ChannelServices.UnregisterChannel(chnl);
+                }
+
                 TcpChannel chl = new TcpChannel();
                 ChannelServices.RegisterChannel(chl, false);
+
                 Console.WriteLine("Client: Canal enregistré");
 
                 profCrud = (IProfCRUD) Activator.GetObject(
@@ -34,7 +42,7 @@ namespace AppBiblio.api
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERREUR :" + ex.Message);
+                MessageBox.Show("ERREUR :" + ex.Message);
             }
         }
 
