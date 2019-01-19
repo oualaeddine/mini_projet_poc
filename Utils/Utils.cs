@@ -13,7 +13,6 @@ namespace Utils
             {
                 newList.AddLast((Ouvrage) obj);
             }
-
             return newList;
         }
     }
