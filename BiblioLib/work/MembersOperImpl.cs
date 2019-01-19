@@ -1,46 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using HumansLib;
-using HumansLib.profs;
 using OuveragesLib;
+using OuvragesDAL;
 
 namespace BiblioLib.work
 {
     public class MembersOperImpl : MarshalByRefObject, IMembersOper
     {
-        public LinkedList<Ouvrage> find(Ouvrage ouvrage)
+        public LinkedList<Ouvrage> find(string search)
         {
-            return null;
-            //todo  find(Ouvrage ouvrage)
+            return new OuvrageDAO().find(search);
         }
 
-        public void reserver(int idMember, int ouvrage)
+        public bool reserver(int idMember, int ouvrageId)
         {
-            throw new System.NotImplementedException();
-        }
+            var dao = new OuvrageDAO();
+            bool reserved = dao.reserver(idMember, ouvrageId);
 
-        public bool reserver(Student student, Ouvrage ouvrage)
-        {
-            return false;
-//todo reserver(Student student, Ouvrage ouvrage)
-        }
+            if (reserved && dao.isDispo(ouvrageId))
+            {
+                new OuvragesOpsEventsHandelers().ouvrageLibreEvent(ouvrageId);
+            }
 
-        public bool reserver(Prof prof, Ouvrage ouvrage)
-        {
-            return false;
-//todo reserver(Prof prof, Ouvrage ouvrage)
-        }
-
-        public bool subscribe(Student student, Ouvrage ouvrage)
-        {
-            return false;
-//todo subscribe(Student student, Ouvrage ouvrage)
-        }
-
-        public bool subscribe(Prof prof, Ouvrage ouvrage)
-        {
-            return false;
-//todo subscribe(Prof prof, Ouvrage ouvrage)
+            return reserved;
         }
     }
 }

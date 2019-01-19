@@ -19,7 +19,7 @@ namespace BiblioServerWCF
 
                     var ouvrage = new Ouvrage {id = Parse(ouvrageId)};
 
-                    return membersOper.reserver(student, ouvrage);
+                    return membersOper.reserver(student.id, ouvrage.id);
                 }
                 case "prof":
                 {
@@ -27,7 +27,7 @@ namespace BiblioServerWCF
 
                     var ouvrage = new Ouvrage {id = Parse(ouvrageId)};
 
-                    return membersOper.reserver(prof, ouvrage);
+                    return membersOper.reserver(prof.id, ouvrage.id);
                 }
                 default:
                 {

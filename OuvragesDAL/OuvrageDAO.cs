@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using HumansLib;
 using MySql.Data.MySqlClient;
 using OuveragesLib;
 using Utils;
@@ -154,6 +155,37 @@ namespace OuvragesDAL
 
             conn.Close();
             return true;
+        }
+
+        public bool reserver(int idMember, int ouvrageId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isDispo(int ouvrageId)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Human getFirstOuvrageSubscriber(int ouvrageId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool deleteEmprunt(Ouvrage ouvrage)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool insertPret(int idOuvrage, int idMembre)
+        {
+            throw new NotImplementedException();
+        }
+
+        public LinkedList<Ouvrage> find(string search)
+        {
+            throw new NotImplementedException();
         }
     }
 }

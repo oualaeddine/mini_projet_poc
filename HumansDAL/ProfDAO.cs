@@ -218,5 +218,20 @@ namespace HumansLib.profs
             conn.Close();
             return true;
         }
+
+        public LinkedList<Prof> find(string s)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Prof findOne(string search)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isSuspended(int profId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

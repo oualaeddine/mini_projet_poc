@@ -223,5 +223,20 @@ namespace HumansLib
             conn.Close();
             return true;
         }
+
+        public LinkedList<Student> find(string s)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Student findOne(string search)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool isSuspended(int memberId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

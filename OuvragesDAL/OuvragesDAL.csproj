@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+      <ProjectReference Include="..\HumansLib\HumansLib.csproj">
+          <Project>{e41e5007-de1d-4992-b25a-da3cca26d34b}</Project>
+          <Name>HumansLib</Name>
+      </ProjectReference>
     <ProjectReference Include="..\OuveragesLib\OuveragesLib.csproj">
       <Project>{026235FA-4009-4F40-9D61-E5A4A4BC9227}</Project>
       <Name>OuveragesLib</Name>

@@ -22,7 +22,6 @@ namespace HumansCRUD
         public LinkedList<User> find(User obj)
         {
             return null;
-            //todo LinkedList<User> find(User obj)
         }
 
         public LinkedList<User> getAll()

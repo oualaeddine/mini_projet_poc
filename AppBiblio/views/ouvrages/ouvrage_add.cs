@@ -33,7 +33,7 @@ namespace AppBiblio.views
                 keywords = keywords
             };
 
-            if (Utils.Utils.isValid(ouvrage))
+            if (true)
             {
                 new OuvragesApi().add(ouvrage);
                 MessageBox.Show("Ouvrage correctement ajouté", "Operation reussite!");

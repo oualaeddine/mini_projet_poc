@@ -20,8 +20,7 @@ namespace HumansCRUD
 
         public LinkedList<Student> find(string obj)
         {
-            return null;
-            //todo LinkedList<Student> find(Student obj)
+            return new StudentsDAO().find(obj);
         }
 
         public LinkedList<Student> getAll()
@@ -46,12 +45,12 @@ namespace HumansCRUD
 
         public Student findOne(string search)
         {
-            throw new System.NotImplementedException();
+            return new StudentsDAO().findOne(search);
         }
 
         public bool isSuspended(Student member)
         {
-            throw new System.NotImplementedException();
+            return new StudentsDAO().isSuspended(member.id);
         }
     }
 }

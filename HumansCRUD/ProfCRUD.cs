@@ -21,8 +21,7 @@ namespace HumansCRUD
 
         public LinkedList<Prof> find(string obj)
         {
-            return null;
-            //todo LinkedList<Prof> find(Prof obj)
+            return new ProfDAO().find(obj);
         }
 
         public LinkedList<Prof> getAll()
@@ -49,12 +48,12 @@ namespace HumansCRUD
 
         public Prof findOne(string search)
         {
-            throw new System.NotImplementedException();
+            return new ProfDAO().findOne(search);
         }
 
         public bool isSuspended(Prof prof)
         {
-            throw new System.NotImplementedException();
+            return new ProfDAO().isSuspended(prof.id);
         }
     }
 }

@@ -2,6 +2,7 @@
 using HumansLib;
 using HumansLib.profs;
 using OuveragesLib;
+using OuvragesDAL;
 
 namespace BiblioLib.work
 {
@@ -9,31 +10,33 @@ namespace BiblioLib.work
     {
         public bool preter(Ouvrage ouvrage, Prof prof)
         {
-            return false;
-            //todo  preter(Ouvrage ouvrage, Prof prof)
+            return preter(ouvrage.id, prof.id);
         }
 
         public bool preter(Ouvrage ouvrage, Student student)
         {
-            return false;
-            //todo  preter(Ouvrage ouvrage, Student student)
+            return preter(ouvrage.id, student.id);
         }
 
         public bool preter(Reservation reservation)
         {
-            return false;
-            //todo  preter(Reservation reservation)
+            return preter(reservation.ouvrage.id, reservation.member.id);
         }
 
         public bool recuperer(Ouvrage ouvrage)
         {
-            return false;
-            //todo  recuperer(Ouvrage ouvrage)
+            bool recup = new OuvrageDAO().deleteEmprunt(ouvrage);
+            if (recup)
+            {
+                new OuvragesOpsEventsHandelers().ouvrageLibreEvent(ouvrage.id);
+            }
+
+            return recup;
         }
 
-        public bool preter(int idOuvrage, int idMembreRes)
+        public bool preter(int idOuvrage, int idMembre)
         {
-            throw new System.NotImplementedException();
+            return new OuvrageDAO().insertPret(idOuvrage, idMembre);
         }
     }
 }

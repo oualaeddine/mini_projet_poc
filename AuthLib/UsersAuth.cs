@@ -33,7 +33,7 @@ namespace AuthLib
 
         private bool validate(string password)
         {
-            throw new NotImplementedException(); //todo bool validate(string password)
+            return password.Length > 7;
         }
     }
 }

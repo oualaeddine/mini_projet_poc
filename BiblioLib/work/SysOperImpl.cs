@@ -1,5 +1,9 @@
-﻿using HumansLib;
+﻿using System.Net;
+using System.Net.Mail;
+using HumansLib;
 using HumansLib.profs;
+using OuveragesLib;
+using OuvragesCRUD;
 
 namespace BiblioLib.work
 {
@@ -15,16 +19,22 @@ namespace BiblioLib.work
             return new StudentsDAO().ban(student);
         }
 
-        public bool sendNotif(Prof prof)
+        public bool sendNotif(Human member, int ouvrageId)
         {
-            return false;
-//todo sendNotif(Prof prof)
-        }
+            Ouvrage ouvrage = new OuvragesCRUDO().getById(ouvrageId);
 
-        public bool sendNotif(Student student)
-        {
-            return false;
-//todo sendNotif(Student student)
+            MailMessage mail = new MailMessage("Biblio", "user@hotmail.com");
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "smtp.gmail.com";
+            client.Credentials = new NetworkCredential("b.v0rt3x@gmail.com", "bdgdhncjxvcfaeae");
+            mail.Subject = "Un ouvvrage est disponible !";
+            mail.Body = "l'ouvrage : " + ouvrage.title + " de l'auteur " + ouvrage.auteur +
+                        " est maintenant disponible vous pouvez le recuperer depuis la bibliotheque";
+            client.Send(mail);
+            return true;
         }
     }
 }

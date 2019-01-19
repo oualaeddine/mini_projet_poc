@@ -1,11 +1,7 @@
-﻿using OuveragesLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
+using OuveragesLib;
 
 namespace BiblioServerWCF
 {
@@ -13,7 +9,6 @@ namespace BiblioServerWCF
     [ServiceContract]
     public interface IServiceOuvragesCRUD
     {
-
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "getAll", ResponseFormat = WebMessageFormat.Json)]
         LinkedList<Ouvrage> getAll();
@@ -24,7 +19,7 @@ namespace BiblioServerWCF
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "find", ResponseFormat = WebMessageFormat.Json)]
-        LinkedList<Ouvrage> find(Ouvrage ouvrage);
+        LinkedList<Ouvrage> find(string ouvrage);
 
 
         [OperationContract]
@@ -38,6 +33,5 @@ namespace BiblioServerWCF
         [OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "delete", ResponseFormat = WebMessageFormat.Json)]
         bool delete(Ouvrage ouvrage);
-
     }
 }

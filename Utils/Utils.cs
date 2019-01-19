@@ -16,11 +16,5 @@ namespace Utils
 
             return newList;
         }
-
-        public static bool isValid(Ouvrage ouvrage)
-        {
-            return true;
-            //todo implement isValid(ouvrage)
-        }
     }
 }

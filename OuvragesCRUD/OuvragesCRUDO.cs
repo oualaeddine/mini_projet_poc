@@ -21,14 +21,9 @@ namespace OuvragesCRUD
 
         public LinkedList<Ouvrage> find(string obj)
         {
-            throw new System.NotImplementedException();
+            return new OuvrageDAO().find(obj);
         }
 
-        public LinkedList<Ouvrage> find(object obj)
-        {
-            return null;
-            //todo  LinkedList<Ouvrage> find(object obj)
-        }
 
         public LinkedList<Ouvrage> getAll()
         {

@@ -1,9 +1,5 @@
 ﻿using HumansLib;
 using HumansLib.profs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace AuthLib
 {
@@ -31,7 +27,7 @@ namespace AuthLib
 
         private bool validate(string password)
         {
-            throw new NotImplementedException(); //todo bool validate(string password)
+            return password.Length > 6;
         }
 
         public bool changePassword(Student student, string password)

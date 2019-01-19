@@ -9,19 +9,16 @@ namespace HumansLib
         public bool delete(User obj)
         {
             return false;
-//todo delete(User obj)
         }
 
         public bool edit(User obj)
         {
             return false;
-//todo edit(User obj)
         }
 
         public LinkedList<User> getAll()
         {
             return null;
-//todo LinkedList<User> getAll(User obj)
         }
 
         public User getByID(int id)
@@ -77,7 +74,6 @@ namespace HumansLib
         public bool insert(User obj)
         {
             return false;
-//todo  insert(User obj)
         }
 
         public bool exists(User user, string password)

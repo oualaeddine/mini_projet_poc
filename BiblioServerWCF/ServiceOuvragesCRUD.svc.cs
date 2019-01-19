@@ -24,7 +24,7 @@ namespace BiblioServerWCF
             return crud.update(ouvrage);
         }
 
-        public LinkedList<Ouvrage> find(Ouvrage ouvrage)
+        public LinkedList<Ouvrage> find(string ouvrage)
         {
             var crud = new OuvragesCRUDO();
 
