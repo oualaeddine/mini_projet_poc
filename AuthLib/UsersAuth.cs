@@ -16,8 +16,8 @@ namespace AuthLib
         public bool login(User user, string password)
         {
             bool valid = validate(password);
-            if (!valid)
-                return false;
+         //   if (!valid)
+            //    return false;
             return new UsersDAO().exists(user, password);
         }
 

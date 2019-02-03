@@ -78,8 +78,11 @@ namespace HumansLib
 
         public bool exists(User user, string password)
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(" login("+user.email+","+password+")");
+            
             var cmd = conn.CreateCommand();
-            cmd.CommandText = $"select * from users where email = {user.email} and password = {password};";
+            cmd.CommandText = $"select * from users where email = '{user.email}' and mdp = '{password}';";
             try
             {
                 conn.Open();

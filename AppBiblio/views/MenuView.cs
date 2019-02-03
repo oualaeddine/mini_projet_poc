@@ -16,7 +16,7 @@ namespace AppBiblio
 
         private void MenuView_Load(object sender, EventArgs e)
         {
-            connected_name.Text = "Berrehal Ouala Eddine.";
+            //connected_name.Text = "Berrehal Ouala Eddine.";
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
@@ -48,6 +48,11 @@ namespace AppBiblio
         private void settings_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
+        }
+
+        private void MenuView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
         }
     }
 }

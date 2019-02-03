@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.members_table = new System.Windows.Forms.DataGridView();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +42,8 @@
             this.niveau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_naissance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.members_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,24 +74,6 @@
             this.members_table.Size = new System.Drawing.Size(787, 312);
             this.members_table.TabIndex = 0;
             this.members_table.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.members_table_CellMouseClick);
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroTextBox1.Location = new System.Drawing.Point(558, 31);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(179, 23);
-            this.metroTextBox1.TabIndex = 1;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.AutoSize = true;
-            this.metroButton1.Location = new System.Drawing.Point(743, 31);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(61, 23);
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Trouver";
             // 
             // Id
             // 
@@ -167,11 +149,31 @@
             // adresse
             // 
             this.adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.adresse.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.adresse.DefaultCellStyle = dataGridViewCellStyle2;
             this.adresse.HeaderText = "adresse";
             this.adresse.Name = "adresse";
             this.adresse.ReadOnly = true;
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroTextBox1.Location = new System.Drawing.Point(558, 31);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(179, 23);
+            this.metroTextBox1.TabIndex = 1;
+            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton1.AutoSize = true;
+            this.metroButton1.Location = new System.Drawing.Point(743, 31);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(61, 23);
+            this.metroButton1.TabIndex = 2;
+            this.metroButton1.Text = "Trouver";
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // members_list
             // 

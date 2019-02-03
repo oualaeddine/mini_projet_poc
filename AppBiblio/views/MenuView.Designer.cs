@@ -34,9 +34,6 @@
             this.add_ouvrage = new MetroFramework.Controls.MetroTile();
             this.ouvrages_list = new MetroFramework.Controls.MetroTile();
             this.recuperer = new MetroFramework.Controls.MetroTile();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.connected_name = new MetroFramework.Controls.MetroLabel();
-            this.param = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // add_member
@@ -111,40 +108,11 @@
             this.recuperer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.recuperer.Click += new System.EventHandler(this.settings_Click);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 322);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(145, 19);
-            this.metroLabel1.TabIndex = 6;
-            this.metroLabel1.Text = "Connecté en tant que : ";
-            // 
-            // connected_name
-            // 
-            this.connected_name.Location = new System.Drawing.Point(174, 322);
-            this.connected_name.Name = "connected_name";
-            this.connected_name.Size = new System.Drawing.Size(511, 23);
-            this.connected_name.TabIndex = 7;
-            this.connected_name.Text = "Berrehal Ouala Eddine";
-            // 
-            // param
-            // 
-            this.param.FontWeight = MetroFramework.MetroLinkWeight.Light;
-            this.param.Location = new System.Drawing.Point(638, 318);
-            this.param.Name = "param";
-            this.param.Size = new System.Drawing.Size(75, 23);
-            this.param.TabIndex = 8;
-            this.param.Text = "Parametres";
-            // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 341);
-            this.Controls.Add(this.param);
-            this.Controls.Add(this.connected_name);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.recuperer);
             this.Controls.Add(this.ouvrages_list);
             this.Controls.Add(this.add_ouvrage);
@@ -156,9 +124,9 @@
             this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "BiblioGest v1.0";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuView_FormClosing);
             this.Load += new System.EventHandler(this.MenuView_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,9 +138,6 @@
         private MetroFramework.Controls.MetroTile add_ouvrage;
         private MetroFramework.Controls.MetroTile ouvrages_list;
         private MetroFramework.Controls.MetroTile recuperer;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel connected_name;
-        private MetroFramework.Controls.MetroLink param;
     }
 }
 

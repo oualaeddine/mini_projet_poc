@@ -226,17 +226,155 @@ namespace HumansLib
 
         public LinkedList<Student> find(string s)
         {
-            throw new NotImplementedException();
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from members,students " +
+                              " where students.id_member = id " +
+                              "and ( prenom like '%" + s + "%' " +
+                              "or email like '%" + s + "%' " +
+                              "or id like '%" + s + "%' " +
+                              "or n_carte like '%" + s + "%') ;";
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            var students = new LinkedList<Student>();
+            var reader = cmd.ExecuteReader();
+            try
+            {
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        var stu = new Student()
+                        {
+                            id = reader.GetInt32(reader.GetOrdinal("id")),
+                            nom = reader.GetString(reader.GetOrdinal("nom")),
+                            prenom = reader.GetString(reader.GetOrdinal("prenom")),
+                            dateNaissance = reader.GetDateTime(reader.GetOrdinal("date_naissance")),
+                            sexe = reader.GetString(reader.GetOrdinal("sexe")),
+                            telephone = reader.GetString(reader.GetOrdinal("numero_tel")),
+                            email = reader.GetString(reader.GetOrdinal("email")),
+                            password = reader.GetString(reader.GetOrdinal("mdp")),
+                            niveau = reader.GetString(reader.GetOrdinal("niveau")),
+                            n_carte = reader.GetString(reader.GetOrdinal("n_carte"))
+                        };
+                        students.AddLast(stu);
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            this.conn.Close();
+
+            return students;
         }
 
-        public Student findOne(string search)
+        public Student findOne(string s)
         {
-            throw new NotImplementedException();
-        }
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from members,students " +
+                              " where students.id_member = id " +
+                              "and ( prenom like '%" + s + "%' " +
+                              "or email like '%" + s + "%' " +
+                              "or id like '%" + s + "%' " +
+                              "or n_carte like '%" + s + "%') limit 1  ;";       
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            var profs = new LinkedList<Student>();
+            var reader = cmd.ExecuteReader();
+            try
+            {
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        return new Student()
+                        {
+                            id = reader.GetInt32(reader.GetOrdinal("id")),
+                            nom = reader.GetString(reader.GetOrdinal("nom")),
+                            prenom = reader.GetString(reader.GetOrdinal("prenom")),
+                            dateNaissance = reader.GetDateTime(reader.GetOrdinal("date_naissance")),
+                            sexe = reader.GetString(reader.GetOrdinal("sexe")),
+                            telephone = reader.GetString(reader.GetOrdinal("numero_tel")),
+                            email = reader.GetString(reader.GetOrdinal("email")),
+                            password = reader.GetString(reader.GetOrdinal("mdp")),
+                            niveau = reader.GetString(reader.GetOrdinal("niveau")),
+                            n_carte = reader.GetString(reader.GetOrdinal("n_carte"))
+                        };
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            this.conn.Close();
+
+            return null;        }
 
         public bool isSuspended(int memberId)
         {
-            throw new NotImplementedException();
-        }
+            var cmd = conn.CreateCommand();
+            cmd.CommandText =
+                $"select * from bans where id_member = {memberId} and TIMESTAMPDIFF(DAY ,date_banned,now())>30;";
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            var reader = cmd.ExecuteReader();
+            try
+            {
+                if (reader.HasRows)
+                {
+                    var count = reader.FieldCount;
+                    while (reader.Read())
+                    {
+                        return true;
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.Write("Erro" + erro);
+                this.conn.Close();
+            }
+
+            this.conn.Close();
+
+            return false;        }
     }
 }

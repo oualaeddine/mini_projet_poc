@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Mail;
 using HumansLib;
 using HumansLib.profs;
@@ -21,11 +22,13 @@ namespace BiblioLib.work
 
         public bool sendNotif(Human member, int ouvrageId)
         {
+            Console.WriteLine("sendNotif({" + member.email + "," + member.nom + "}," + ouvrageId + ")");
             Ouvrage ouvrage = new OuvragesCRUDO().getById(ouvrageId);
 
-            MailMessage mail = new MailMessage("Biblio", "user@hotmail.com");
+            MailMessage mail = new MailMessage("b.v0rt3x@gmail.com",member.email);
             SmtpClient client = new SmtpClient();
             client.Port = 25;
+            client.EnableSsl = true;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
             client.Host = "smtp.gmail.com";

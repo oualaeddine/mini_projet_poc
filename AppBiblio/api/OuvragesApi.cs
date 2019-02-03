@@ -94,5 +94,10 @@ namespace AppBiblio.api
         {
             prete(userOper.preter(idOuvrage, idMembreRes));
         }
+
+        public bool isOuvrageDispoForUser(int idOuvrage, int humanId)
+        {
+          return  new OuvragesCRUDO().isOuvrageDispoForUser(idOuvrage, humanId);
+        }
     }
 }

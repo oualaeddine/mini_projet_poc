@@ -50,7 +50,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-      <Reference Include="System.Runtime.Remoting"/>
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,8 +62,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\AuthApi.cs" />
     <Compile Include="api\membersApi.cs" />
     <Compile Include="api\OuvragesApi.cs" />
+    <Compile Include="views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\members\edit_member.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +142,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\oper\Recuperer.resx">
       <DependentUpon>Recuperer.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,10 +192,10 @@
       <Project>{b3f1c015-d971-4701-b3e6-5867f342ecce}</Project>
       <Name>BiblioLib</Name>
     </ProjectReference>
-      <ProjectReference Include="..\HumansCRUD\HumansCRUD.csproj">
-          <Project>{9de020dd-d15d-4964-9467-7100848edabe}</Project>
-          <Name>HumansCRUD</Name>
-      </ProjectReference>
+    <ProjectReference Include="..\HumansCRUD\HumansCRUD.csproj">
+      <Project>{9de020dd-d15d-4964-9467-7100848edabe}</Project>
+      <Name>HumansCRUD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HumansLib\HumansLib.csproj">
       <Project>{E41E5007-DE1D-4992-B25A-DA3CCA26D34B}</Project>
       <Name>HumansLib</Name>
@@ -194,10 +204,10 @@
       <Project>{026235fa-4009-4f40-9d61-e5a4a4bc9227}</Project>
       <Name>OuveragesLib</Name>
     </ProjectReference>
-      <ProjectReference Include="..\OuvragesCRUD\OuvragesCRUD.csproj">
-          <Project>{63cfb25a-4fb1-4ff4-8e3c-83c81b58edd5}</Project>
-          <Name>OuvragesCRUD</Name>
-      </ProjectReference>
+    <ProjectReference Include="..\OuvragesCRUD\OuvragesCRUD.csproj">
+      <Project>{63cfb25a-4fb1-4ff4-8e3c-83c81b58edd5}</Project>
+      <Name>OuvragesCRUD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{dae23f52-6dbc-4c75-ba46-bb56cc12086c}</Project>
       <Name>Utils</Name>

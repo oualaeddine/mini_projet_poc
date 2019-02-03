@@ -48,5 +48,11 @@ namespace OuvragesCRUD
 
             return dao.edit(ouvrage);
         }
+
+        public bool isOuvrageDispoForUser(int idOuvrage, int humanId)
+        {
+            return new OuvrageDAO().isDispoForMember(idOuvrage, humanId);
+            
+        }
     }
 }

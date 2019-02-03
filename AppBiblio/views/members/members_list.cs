@@ -152,5 +152,17 @@ namespace AppBiblio.views.members
             OnGetData result = fillGrid;
             new membersApi().getAll(result);
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            OnGetData result = fillGrid;
+            members_table.Rows.Clear();
+            new membersApi().trouverMembre(metroTextBox1.Text,result);
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

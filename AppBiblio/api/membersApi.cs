@@ -114,5 +114,26 @@ namespace AppBiblio.api
 
             found(member, isSuspended);
         }
+        public void trouverMembre(string search, members_list.OnGetData found)
+        {
+     
+
+            LinkedList<Student> students = studentCRUD.find(search);
+            LinkedList<Prof> profs = profCrud.find(search);
+
+            LinkedList<Human> membres = new LinkedList<Human>();
+
+            foreach (var student in students)
+            {
+                membres.AddLast(student);
+            }
+
+            foreach (var prof in profs)
+            {
+                membres.AddLast(prof);
+            }
+
+            found(membres);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBiblio.views;
+using System;
 using System.Windows.Forms;
 
 namespace AppBiblio
@@ -13,7 +14,7 @@ namespace AppBiblio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuView());
+            Application.Run(new Login());
         }
     }
 }

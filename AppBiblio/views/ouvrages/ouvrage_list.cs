@@ -135,7 +135,10 @@ namespace AppBiblio.views.ouvrages
                 }
                 case "reserv":
                 {
-                    MessageBox.Show("reservation effectué avec succés!", "Success", MessageBoxButtons.OK,
+                    MessageBox.Show(
+                        "reservation effectué avec succés! " +
+                        "une notification sera envoyé dé que l'ouvrage sera disponnible!",
+                        "Success", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     break;
                 }

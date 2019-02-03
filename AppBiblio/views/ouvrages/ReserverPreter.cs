@@ -72,6 +72,8 @@ namespace AppBiblio.views.ouvrages
                 id_membre.Text = "Id Membre : " + human.id;
                 etat_membre.Text = "Etat : " + (isSuspended ? "suspendu" : "non suspendu");
                 this.idMembreRes = human.id;
+
+                this.isOuvrageDispo= new OuvragesApi().isOuvrageDispoForUser(idOuvrage,human.id);
             }
         }
 
@@ -89,7 +91,7 @@ namespace AppBiblio.views.ouvrages
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            if (this.isOuvrageDispo)
+            if (isOuvrageDispo)
             {
                 OnOuvragePrete prete = onOuvragePrete;
                 ouvragesApi.preter(idOuvrage, idMembreRes, prete);
@@ -103,14 +105,15 @@ namespace AppBiblio.views.ouvrages
 
         private void onOuvrageRes(bool isreserved)
         {
-            this.ouvrageRes((isreserved ? "reserv" : "error"));
             Hide();
+
+            this.ouvrageRes((isreserved ? "reserv" : "error"));
         }
 
         private void onOuvragePrete(bool isprete)
         {
-            this.ouvrageRes((isprete ? "prete" : "error"));
             Hide();
+            this.ouvrageRes((isprete ? "prete" : "error"));
         }
     }
 }
