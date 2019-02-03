@@ -31,7 +31,6 @@ namespace AppBiblio
 
         private void banned_list_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Cette fonctinalité n'est pas encore implementée!", "Action impossible");
             new Recuperer().Show();
         }
 

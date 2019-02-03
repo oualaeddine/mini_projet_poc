@@ -56,9 +56,11 @@
             // 
             this.password.Location = new System.Drawing.Point(23, 118);
             this.password.Name = "password";
+            this.password.PasswordChar = '●';
             this.password.PromptText = "Mot de passe";
             this.password.Size = new System.Drawing.Size(238, 23);
             this.password.TabIndex = 2;
+            this.password.UseSystemPasswordChar = true;
             // 
             // email
             // 
@@ -78,7 +80,7 @@
             this.Controls.Add(this.annuler_btn);
             this.Controls.Add(this.connect_btn);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "Authentification";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 
